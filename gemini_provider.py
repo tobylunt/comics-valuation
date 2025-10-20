@@ -1,133 +1,142 @@
-import google.generativeai as genai
-from typing import Optional
+from google import genai
+from google.genai import types
+from typing import Optional, List
 from PIL import Image
+from pydantic import BaseModel
 import json
 import re
+import io
 
 from models import ComicValuation
 
 
-class GeminiComicAnalyzer:
-    """Gemini-powered comic book analyzer - two-step approach for comic identification and pricing"""
+class IdentificationSchema(BaseModel):
+    """Schema for comic identification"""
+    series: str
+    title: str
+    issue_number: str
+    publisher: str
+    publication_date: str
+    estimated_grade: str
+    condition_notes: List[str]
+    key_issue: bool
+    key_issue_notes: str
+    rarity_notes: str
+    identification_confidence: float
+    analysis_notes: str
 
-    def __init__(self, api_key: str, model: str = "gemini-2.0-flash-exp"):
-        genai.configure(api_key=api_key)
-        self.model_name = model
-        self.model = genai.GenerativeModel(model_name=self.model_name)
+
+class GeminiComicAnalyzer:
+    """Gemini-powered comic book analyzer with TRUE Google Search grounding for real market pricing"""
+
+    def __init__(self, api_key: str, model: str = "gemini-2.5-flash"):
+        self.client = genai.Client(api_key=api_key)
+        self.model = model
 
     async def analyze_comic(self, image_path: str) -> ComicValuation:
-        """Analyze a comic book image with market-based pricing (two-step process)"""
+        """Analyze a comic book image with REAL market data from Google Search grounding"""
 
-        # Load image
+        # Load and prepare image
         image = Image.open(image_path)
+        img_byte_arr = io.BytesIO()
+        image.save(img_byte_arr, format='PNG')
+        img_bytes = img_byte_arr.getvalue()
 
         # STEP 1: Identify comic from image
-        identification_prompt = """You are a professional comic book appraiser. Analyze this comic book cover image and identify:
+        identification_prompt = """Analyze this comic book cover image and identify:
 
-1. Series name (exactly as shown on cover)
-2. Issue number (with any variant info)
+1. Series name (exactly as shown)
+2. Issue number
 3. Publisher
-4. Publication date or era (if determinable from style)
-5. Condition grade (0.5-10.0 scale) based on visible damage
-6. Specific condition issues (creases, tears, spine stress, etc.)
-7. Whether this is a key issue and why
-8. Your confidence in identification
+4. Publication date/era
+5. Condition grade (0.5-10.0 scale based on visible damage)
+6. Condition issues (creases, tears, spine stress, etc.)
+7. Key issue status
 
-Use "Unknown" for any information not clearly visible.
+Use "Unknown" for unclear information."""
 
-Respond with JSON:
-{
-  "series": "Series name",
-  "title": "Issue title if visible",
-  "issue_number": "Issue number",
-  "publisher": "Publisher",
-  "publication_date": "Date or Unknown",
-  "estimated_grade": "X.X",
-  "condition_notes": ["List of issues"],
-  "key_issue": true/false,
-  "key_issue_notes": "Why significant or Not a key issue",
-  "rarity_notes": "Rarity info or Unknown",
-  "identification_confidence": 0.0,
-  "analysis_notes": "Any observations",
-  "image_filename": "placeholder",
-  "llm_provider": "placeholder",
-  "analysis_date": "placeholder"
-}"""
-
-        # Configure generation
-        generation_config = genai.types.GenerationConfig(
-            temperature=0.1,
-            response_mime_type="application/json"
-        )
-
-        # Get identification from vision model
-        step1_response = await self.model.generate_content_async(
-            [identification_prompt, image],
-            generation_config=generation_config
+        # Get identification with structured output
+        response = self.client.models.generate_content(
+            model=self.model,
+            contents=[
+                identification_prompt,
+                types.Part.from_bytes(data=img_bytes, mime_type='image/png')
+            ],
+            config=types.GenerateContentConfig(
+                temperature=0.1,
+                response_mime_type="application/json",
+                response_schema=IdentificationSchema
+            )
         )
 
         # Parse identification
-        response_text = step1_response.text
-        if response_text.startswith('```json'):
-            response_text = response_text[7:]
-        if response_text.endswith('```'):
-            response_text = response_text[:-3]
-        response_text = response_text.strip()
+        if hasattr(response, 'parsed') and response.parsed:
+            data = response.parsed.model_dump()
+        else:
+            # Fallback to text parsing
+            response_text = response.text.strip()
+            if response_text.startswith('```json'):
+                response_text = response_text[7:]
+            if response_text.endswith('```'):
+                response_text = response_text[:-3]
+            data = json.loads(response_text.strip())
 
-        data = json.loads(response_text)
-
-        # STEP 2: Ask Gemini to research and provide realistic market prices
+        # STEP 2: Use Google Search grounding to find REAL market prices
         series = data.get('series', 'Unknown')
-        issue = data.get('issue_number', '')
+        issue = data.get('issue_number', 'Unknown')
         grade = data.get('estimated_grade', '5.0')
         publisher = data.get('publisher', 'Unknown')
 
-        # Use your knowledge + reasoning to provide realistic pricing
-        pricing_prompt = f"""Based on your knowledge of comic book markets, provide realistic current market price estimates for:
+        # Craft search-optimized prompt
+        search_prompt = f"""Search for current market prices for this comic book:
 
 Comic: {series} #{issue}
 Publisher: {publisher}
-Grade: {grade}
+Grade/Condition: {grade}
 
-Consider:
-- This specific series and issue's historical significance
-- The grade/condition provided
-- Typical market values for similar comics
-- Whether this is a key issue, first appearance, or regular issue
-- Current comic market trends
+Search for SOLD prices from:
+- GPA GoCollect Price Guide
+- Heritage Auctions sold lots
+- eBay completed/sold listings
+- MyComicShop prices
+- ComicLink auction results
 
-Provide realistic estimates:
-LOW: $X.XX (conservative/worst case)
-BEST: $X.XX (most likely current value)
-HIGH: $X.XX (optimistic but realistic)
-CONFIDENCE: 0.X (0.0-1.0 based on your knowledge)
-REASONING: Brief explanation of how you determined these prices
+Based on ACTUAL sold prices you find, provide:
+- Conservative low estimate (worst case)
+- Best estimate (most likely current value)
+- Optimistic high estimate (best case)
+- Confidence level (0.0-1.0)
 
-Be realistic - most comics are worth $1-20, key issues $50-500, major keys $500+"""
+Format clearly with dollar amounts."""
 
-        # Get pricing estimate
-        price_response = await self.model.generate_content_async(
-            pricing_prompt,
-            generation_config=genai.types.GenerationConfig(temperature=0.1)
+        # Enable Google Search grounding
+        grounding_tool = types.Tool(google_search=types.GoogleSearch())
+
+        # Get market-grounded pricing
+        price_response = self.client.models.generate_content(
+            model=self.model,
+            contents=search_prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.1,
+                tools=[grounding_tool]
+            )
         )
 
-        # Parse pricing response
+        # Extract price data
         price_text = price_response.text
 
-        # Extract values with regex
-        low_match = re.search(r'LOW:\s*\$?([\d,.]+)', price_text, re.IGNORECASE)
-        best_match = re.search(r'BEST:\s*\$?([\d,.]+)', price_text, re.IGNORECASE)
-        high_match = re.search(r'HIGH:\s*\$?([\d,.]+)', price_text, re.IGNORECASE)
-        conf_match = re.search(r'CONFIDENCE:\s*([\d.]+)', price_text, re.IGNORECASE)
-        reasoning_match = re.search(r'REASONING:\s*(.+?)(?:\n\n|$)', price_text, re.IGNORECASE | re.DOTALL)
+        # Parse prices with regex
+        low_match = re.search(r'(?:low|conservative)[:\s]*\$?([\d,]+(?:\.\d{2})?)', price_text, re.IGNORECASE)
+        best_match = re.search(r'(?:best|most likely)[:\s]*\$?([\d,]+(?:\.\d{2})?)', price_text, re.IGNORECASE)
+        high_match = re.search(r'(?:high|optimistic)[:\s]*\$?([\d,]+(?:\.\d{2})?)', price_text, re.IGNORECASE)
+        conf_match = re.search(r'confidence[:\s]*([\d.]+)', price_text, re.IGNORECASE)
 
-        # Clean up numbers (remove commas)
         def clean_price(match):
             if match:
                 return float(match.group(1).replace(',', ''))
             return None
 
-        # Build valuation with estimated prices
+        # Build valuation with grounded prices
         data['valuation'] = {
             'low_estimate': clean_price(low_match) or 1.0,
             'best_estimate': clean_price(best_match) or 5.0,
@@ -135,22 +144,46 @@ Be realistic - most comics are worth $1-20, key issues $50-500, major keys $500+
             'confidence': float(conf_match.group(1)) if conf_match else 0.6
         }
 
-        # Add pricing reasoning to analysis notes
-        reasoning = reasoning_match.group(1).strip() if reasoning_match else 'Based on model knowledge of comic markets'
-        current_notes = data.get('analysis_notes', '')
-        data['analysis_notes'] = f"{current_notes} | Pricing: {reasoning}"
+        # Extract grounding metadata (search queries and sources)
+        grounding_info = []
+        if hasattr(price_response, 'candidates') and price_response.candidates:
+            candidate = price_response.candidates[0]
+            if hasattr(candidate, 'grounding_metadata') and candidate.grounding_metadata:
+                metadata = candidate.grounding_metadata
 
-        # Create and return valuation
+                # Get search queries
+                if hasattr(metadata, 'web_search_queries') and metadata.web_search_queries:
+                    queries = ', '.join(metadata.web_search_queries)
+                    grounding_info.append(f"Searches: {queries}")
+
+                # Get sources
+                if hasattr(metadata, 'grounding_chunks') and metadata.grounding_chunks:
+                    sources = [chunk.web.title for chunk in metadata.grounding_chunks if hasattr(chunk, 'web')]
+                    if sources:
+                        grounding_info.append(f"Sources: {', '.join(sources[:5])}")
+
+        # Add grounding details to analysis notes
+        current_notes = data.get('analysis_notes', '')
+        if grounding_info:
+            data['analysis_notes'] = f"{current_notes} | Market data: {' | '.join(grounding_info)}"
+        else:
+            data['analysis_notes'] = f"{current_notes} | Market data: Google Search grounding enabled"
+
+        # Add placeholder metadata
+        data['image_filename'] = 'placeholder'
+        data['llm_provider'] = 'placeholder'
+        data['analysis_date'] = 'placeholder'
+
         return ComicValuation(**data)
 
 
 class GeminiComicComparator:
     """Compare results from Gemini"""
 
-    def __init__(self, api_key: str, model: str = "gemini-2.0-flash-exp"):
-        self.analyzer = GeminiComicAnalyzer(api_key, model)
+    def __init__(self, api_key: str, model: str = "gemini-2.5-flash"):
+        self.with_search = GeminiComicAnalyzer(api_key, model)
 
     async def compare_analyses(self, image_path: str) -> tuple[ComicValuation, ComicValuation]:
-        """Get analysis"""
-        result = await self.analyzer.analyze_comic(image_path)
+        """Get grounded analysis"""
+        result = await self.with_search.analyze_comic(image_path)
         return result, result
