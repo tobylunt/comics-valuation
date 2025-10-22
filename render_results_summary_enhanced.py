@@ -353,8 +353,8 @@ def generate_enhanced_html_report(analysis: Dict[str, Any],
     for i, item in enumerate(processed):
         # Details modal (condition notes + analysis notes)
         details_modal_id = f"details-modal-{i}"
-        html_parts.append(f'<div id="{details_modal_id}" class="modal">')
-        html_parts.append('<div class="modal-content">')
+        html_parts.append(f'<div id="{details_modal_id}" class="modal" onclick="closeModal(\'{details_modal_id}\')">')
+        html_parts.append('<div class="modal-content" onclick="event.stopPropagation();">')
         html_parts.append(f'<span class="close" onclick="closeModal(\'{details_modal_id}\')">&times;</span>')
         html_parts.append(f'<h3>{escape(item["series"])} #{escape(item["issue"])}</h3>')
         html_parts.append(f'<h4>Title: {escape(item["title"])}</h4>')
@@ -370,7 +370,11 @@ def generate_enhanced_html_report(analysis: Dict[str, Any],
 
         html_parts.append('<h4>Analysis Notes:</h4>')
         if item['analysis_notes']:
-            html_parts.append(f'<p style="white-space: pre-wrap; background: #f8f9fa; padding: 12px; border-radius: 4px;">{escape(item["analysis_notes"])}</p>')
+            # Remove market data section from analysis notes
+            analysis_text = item['analysis_notes']
+            if ' | Market data:' in analysis_text:
+                analysis_text = analysis_text.split(' | Market data:')[0].strip()
+            html_parts.append(f'<p style="white-space: pre-wrap; background: #f8f9fa; padding: 12px; border-radius: 4px;">{escape(analysis_text)}</p>')
         else:
             html_parts.append('<p class="muted">No analysis notes available.</p>')
 
@@ -379,8 +383,8 @@ def generate_enhanced_html_report(analysis: Dict[str, Any],
 
         # Sources modal (grounding sources + search queries)
         sources_modal_id = f"sources-modal-{i}"
-        html_parts.append(f'<div id="{sources_modal_id}" class="modal">')
-        html_parts.append('<div class="modal-content">')
+        html_parts.append(f'<div id="{sources_modal_id}" class="modal" onclick="closeModal(\'{sources_modal_id}\')">')
+        html_parts.append('<div class="modal-content" onclick="event.stopPropagation();">')
         html_parts.append(f'<span class="close" onclick="closeModal(\'{sources_modal_id}\')">&times;</span>')
         html_parts.append(f'<h3>Valuation Sources for {escape(item["series"])} #{escape(item["issue"])}</h3>')
         html_parts.append(f'<p><strong>Best Estimate:</strong> {fmt_money(item["best"])}</p>')
@@ -433,7 +437,7 @@ def generate_enhanced_html_report(analysis: Dict[str, Any],
         document.getElementById(modalId).style.display = 'none';
     }
 
-    // Close modal when clicking outside
+    // Close modal when clicking outside (backup for inline handlers)
     window.onclick = function(event) {
         if (event.target.classList.contains('modal')) {
             event.target.style.display = 'none';
