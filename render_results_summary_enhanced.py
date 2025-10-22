@@ -7,6 +7,7 @@ Adds estimated grade column and modals for condition/analysis notes and groundin
 import json
 import html
 import base64
+import csv
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 from datetime import datetime
@@ -39,6 +40,44 @@ def safe_get(row: Dict[str, Any], key: str) -> str:
     """Safely get a value from a row, returning empty string if missing."""
     return str(row.get(key, "")) if row.get(key) is not None else ""
 
+def safe_parse_float(row: Dict[str, Any], key: str, default: float = 0.0) -> float:
+    """Safely parse a float value from a row."""
+    value = row.get(key, "")
+    if value == "" or value is None:
+        return default
+    try:
+        return float(str(value))
+    except (ValueError, TypeError):
+        return default
+
+def parse_search_queries(queries_str: str) -> List[str]:
+    """Parse search queries from CSV format (pipe-separated)."""
+    if not queries_str or queries_str.strip() == "":
+        return []
+    return [q.strip() for q in queries_str.split('|') if q.strip()]
+
+def parse_source_urls(sources_str: str) -> List[Dict[str, str]]:
+    """Parse source URLs from CSV format (pipe-separated domain: url pairs)."""
+    if not sources_str or sources_str.strip() == "":
+        return []
+
+    sources = []
+    pairs = [s.strip() for s in sources_str.split('|') if s.strip()]
+
+    for pair in pairs:
+        if ':' in pair:
+            parts = pair.split(':', 1)
+            if len(parts) == 2:
+                domain = parts[0].strip()
+                url = parts[1].strip()
+                sources.append({
+                    'title': domain,
+                    'url': url,
+                    'snippet': f"Source from {domain}"
+                })
+
+    return sources
+
 def contains_suspicious_text(text: str) -> bool:
     """Check if text contains suspicious keywords that might indicate incorrect identification."""
     if not text:
@@ -50,6 +89,59 @@ def load_json_data(json_path: Path) -> Dict[str, Any]:
     """Load the JSON data file."""
     with open(json_path, 'r', encoding='utf-8') as f:
         return json.load(f)
+
+def load_csv_data(csv_path: Path) -> Dict[str, Any]:
+    """Load CSV data and convert to JSON-like structure."""
+    results = []
+
+    with open(csv_path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            # Convert CSV row to JSON-like structure
+            result = {
+                'image_filename': row.get('Image Filename', ''),
+                'success': True,
+                'valuation': {
+                    'series': row.get('Series', ''),
+                    'title': row.get('Title', ''),
+                    'issue_number': row.get('Issue Number', ''),
+                    'publication_date': row.get('Publication Date', ''),
+                    'publisher': row.get('Publisher', ''),
+                    'estimated_grade': row.get('Grade', ''),
+                    'condition_notes': row.get('Condition Notes', '').split('; ') if row.get('Condition Notes') else [],
+                    'analysis_notes': row.get('Analysis Notes', ''),
+                    'identification_confidence': safe_parse_float(row, 'Identification Confidence', 0.0),
+                    'valuation': {
+                        'low_estimate': safe_parse_float(row, 'Low Estimate ($)', 0.0),
+                        'best_estimate': safe_parse_float(row, 'Best Estimate ($)', 0.0),
+                        'high_estimate': safe_parse_float(row, 'High Estimate ($)', 0.0),
+                        'confidence': safe_parse_float(row, 'Valuation Confidence', 0.0)
+                    },
+                    'grounding_metadata': {
+                        'sources': parse_source_urls(row.get('Source URLs', '')),
+                        'search_queries': parse_search_queries(row.get('Search Queries', ''))
+                    }
+                }
+            }
+            results.append(result)
+
+    return {
+        'metadata': {
+            'total_processed': len(results),
+            'successful': len(results),
+            'failed': 0
+        },
+        'results': results
+    }
+
+def load_data_file(file_path: Path) -> Dict[str, Any]:
+    """Load data from CSV or JSON file based on extension."""
+    if file_path.suffix.lower() == '.csv':
+        return load_csv_data(file_path)
+    elif file_path.suffix.lower() == '.json':
+        return load_json_data(file_path)
+    else:
+        raise ValueError(f"Unsupported file format: {file_path.suffix}. Use .csv or .json")
 
 def analyze_json_data(data: Dict[str, Any],
                      id_conf_threshold: float = ID_CONF_THRESHOLD,
@@ -522,8 +614,8 @@ def main():
     """Main function to generate enhanced HTML report."""
     import argparse
 
-    parser = argparse.ArgumentParser(description="Generate enhanced HTML report from comic valuation JSON")
-    parser.add_argument("json_file", type=Path, help="Path to the JSON results file")
+    parser = argparse.ArgumentParser(description="Generate enhanced HTML report from comic valuation CSV or JSON")
+    parser.add_argument("data_file", type=Path, help="Path to the CSV or JSON results file")
     parser.add_argument("-o", "--output", type=Path, default=Path("results/enhanced_summary.html"), help="Output HTML file path")
     parser.add_argument("--images-dir", type=Path, help="Directory containing original images")
     parser.add_argument("--thumbs-dir", type=Path, help="Directory for thumbnails")
@@ -533,12 +625,12 @@ def main():
 
     args = parser.parse_args()
 
-    if not args.json_file.exists():
-        print(f"Error: JSON file {args.json_file} not found")
+    if not args.data_file.exists():
+        print(f"Error: Data file {args.data_file} not found")
         return 1
 
-    print(f"Loading JSON data from {args.json_file}")
-    json_data = load_json_data(args.json_file)
+    print(f"Loading data from {args.data_file}")
+    json_data = load_data_file(args.data_file)
 
     print("Analyzing data...")
     analysis = analyze_json_data(json_data, args.id_conf_threshold, args.val_conf_threshold)
