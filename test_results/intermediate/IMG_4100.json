@@ -1,0 +1,62 @@
+{
+  "image_filename": "IMG_4100.jpeg",
+  "success": true,
+  "processing_time": 403.58524537086487,
+  "error_message": null,
+  "valuation": {
+    "series": "WILDSTAR",
+    "title": "WILDSTAR",
+    "issue_number": "1",
+    "publisher": "Image Comics",
+    "publication_date": "March 1993",
+    "estimated_grade": "5.5",
+    "condition_notes": [
+      "Multiple spine stress lines/color breaks visible along the entire length of the spine.",
+      "Significant blunting and creasing on the top right corner.",
+      "Minor blunting and wear on the bottom right corner.",
+      "Some general edge wear and slight discoloration on the white cover areas."
+    ],
+    "key_issue": true,
+    "key_issue_notes": "This is the first issue of the Wildstar series, published by Image Comics. First issues of new series, especially from a prominent publisher like Image in the 1990s, are often considered minor key issues.",
+    "rarity_notes": "Image Comics from the early 1990s generally had high print runs, so this issue is not considered rare.",
+    "valuation": {
+      "low_estimate": 0.5,
+      "best_estimate": 2.65,
+      "high_estimate": 5.0,
+      "confidence": 0.4
+    },
+    "image_filename": "IMG_4100.jpeg",
+    "analysis_date": "2025-10-20T14:12:23.315599",
+    "llm_provider": "gemini-gemini-2.5-flash",
+    "identification_confidence": 0.95,
+    "analysis_notes": "The comic is clearly identified as Wildstar #1 from Image Comics. The publication month 'MAR' is visible in the price box, and the style and publisher strongly suggest a 1993 release. The condition shows moderate wear, particularly on the spine and corners, leading to an estimated grade of 5.5. It is a first issue, which gives it some key status. | Market data: Searches: WILDSTAR #1 March 1993 Image Comics 5.5 GPA sold price, WILDSTAR #1 March 1993 Image Comics 5.5 GoCollect sold price, WILDSTAR #1 March 1993 Image Comics 5.5 Heritage Auctions sold price, WILDSTAR #1 March 1993 Image Comics 5.5 eBay sold listings, WILDSTAR #1 March 1993 Image Comics 5.5 MyComicShop sold price, WILDSTAR #1 March 1993 Image Comics 5.5 ComicLink sold price, WILDSTAR #1 March 1993 Image Comics 5.5 eBay sold listings, WILDSTAR #1 March 1993 Image Comics GPA sold prices, WILDSTAR #1 March 1993 Image Comics ComicLink sold prices | Sources: gocollect.com, pricecharting.com, mycomicshop.com",
+    "grounding_metadata": {
+      "search_queries": [
+        "WILDSTAR #1 March 1993 Image Comics 5.5 GPA sold price",
+        "WILDSTAR #1 March 1993 Image Comics 5.5 GoCollect sold price",
+        "WILDSTAR #1 March 1993 Image Comics 5.5 Heritage Auctions sold price",
+        "WILDSTAR #1 March 1993 Image Comics 5.5 eBay sold listings",
+        "WILDSTAR #1 March 1993 Image Comics 5.5 MyComicShop sold price",
+        "WILDSTAR #1 March 1993 Image Comics 5.5 ComicLink sold price",
+        "WILDSTAR #1 March 1993 Image Comics 5.5 eBay sold listings",
+        "WILDSTAR #1 March 1993 Image Comics GPA sold prices",
+        "WILDSTAR #1 March 1993 Image Comics ComicLink sold prices"
+      ],
+      "sources": [
+        {
+          "title": "gocollect.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYXRIQiS-__ZiL-z8ZcoDgzwRs2X_Q3ie7efexHJrefnuYGJcgQW_TePfKYEERiDY9tfVEKOCUVcfrP1ilKXpEyWAjfQ-YtniPYFPOzAyyfltwMOXbHNsoWUVcMnxuciB38u4soUngVwvh"
+        },
+        {
+          "title": "pricecharting.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqsmdmA4vl0w-Ck4QuDv6HOSBSVMkIkd3F7NSNIG32XhZnJOI4uH8LmUZ9cq_AROTfyI8-Y-Ygk2SKIGFitrAsbuX-oU44TBFqzFo0GLcdsBXVehbskjUNDfF_hlXxoGjWYD5Ysz3ffeuDkAFT8PXTuXycSbebIcDaKjnCCpWbSFtLNGmbwnKY8-eGC2-TZmzbq3Ex"
+        },
+        {
+          "title": "mycomicshop.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8lPG4P9tN7c4gngTyfumkCGznlCKwaOI5ItWfsbDXQQ699vvHPgZ1_vVF1u7PKuw4GyFJM6H-zTpZjkDLHC-QfKvRg6phSTjaQFJD7h9gtYpZ35XzoZf98I4rZfRNGqTtwzXb60pw8jl_Rr_d"
+        }
+      ],
+      "grounding_used": true
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "image_filename": "IMG_4095.jpeg",
+  "success": true,
+  "processing_time": 425.0229570865631,
+  "error_message": null,
+  "valuation": {
+    "series": "DANGER GIRL",
+    "title": "DANGER GIRL",
+    "issue_number": "4",
+    "publisher": "Image Comics",
+    "publication_date": "August 1998",
+    "estimated_grade": "7.5",
+    "condition_notes": [
+      "Minor blunting/wear on top left corner",
+      "Minor blunting/wear on bottom left corner",
+      "Very light spine stress visible upon close inspection"
+    ],
+    "key_issue": false,
+    "key_issue_notes": "This is a regular issue in the series and not generally considered a major key issue (e.g., first appearance, major death, or significant event).",
+    "rarity_notes": "Danger Girl was a popular series from Image Comics; copies of this issue are generally available and not considered rare.",
+    "valuation": {
+      "low_estimate": 10.0,
+      "best_estimate": 15.0,
+      "high_estimate": 25.0,
+      "confidence": 0.3
+    },
+    "image_filename": "IMG_4095.jpeg",
+    "analysis_date": "2025-10-20T14:13:25.838173",
+    "llm_provider": "gemini-gemini-2.5-flash",
+    "identification_confidence": 0.95,
+    "analysis_notes": "The series title 'DANGER GIRL', issue number '4', publisher 'Image', and publication month 'AUG' are clearly visible on the cover. The year 1998 is inferred based on the art style, publisher, and common knowledge of the series' publication history. The comic appears to be in solid Very Fine- condition with minor corner wear and very light spine stress. | Market data: Searches: Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices GPA, Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices GoCollect, Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices Heritage Auctions, Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices eBay sold listings, Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices MyComicShop, Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices ComicLink, Danger Girl #4 August 1998 Image Comics CGC 7.5 sold price eBay, Danger Girl #4 August 1998 Image Comics raw 7.5 sold price eBay, GoCollect Danger Girl #4 1998 7.5 sales, Heritage Auctions Danger Girl #4 1998 7.5 sold, ComicLink Danger Girl #4 1998 7.5 sold, GPA Comics Danger Girl #4 1998 7.5 sold, Danger Girl #4 Image Comics publication date, Danger Girl #4 August 1998 Image Comics sold price 7.5 eBay, Danger Girl #4 August 1998 Image Comics sold price 7.5 GoCollect, Danger Girl #4 August 1998 Image Comics sold price 7.5 Heritage Auctions, Danger Girl #4 August 1998 Image Comics sold price 7.5 ComicLink, Danger Girl #4 August 1998 Image Comics sold price 7.5 MyComicShop, Danger Girl #4 December 1998 Image Comics CGC 7.5 sold eBay, Danger Girl #4 December 1998 Image Comics raw 7.5 sold eBay, Danger Girl #4 December 1998 Image Comics VF- sold eBay, GoCollect Danger Girl #4 December 1998 7.5 sales, Heritage Auctions Danger Girl #4 December 1998 7.5 sold, ComicLink Danger Girl #4 December 1998 7.5 sold, MyComicShop Danger Girl #4 December 1998 7.5 sold | Sources: mycomicshop.com, wikipedia.org, gocollect.com",
+    "grounding_metadata": {
+      "search_queries": [
+        "Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices GPA",
+        "Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices GoCollect",
+        "Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices Heritage Auctions",
+        "Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices eBay sold listings",
+        "Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices MyComicShop",
+        "Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices ComicLink",
+        "Danger Girl #4 August 1998 Image Comics CGC 7.5 sold price eBay",
+        "Danger Girl #4 August 1998 Image Comics raw 7.5 sold price eBay",
+        "GoCollect Danger Girl #4 1998 7.5 sales",
+        "Heritage Auctions Danger Girl #4 1998 7.5 sold",
+        "ComicLink Danger Girl #4 1998 7.5 sold",
+        "GPA Comics Danger Girl #4 1998 7.5 sold",
+        "Danger Girl #4 Image Comics publication date",
+        "Danger Girl #4 August 1998 Image Comics sold price 7.5 eBay",
+        "Danger Girl #4 August 1998 Image Comics sold price 7.5 GoCollect",
+        "Danger Girl #4 August 1998 Image Comics sold price 7.5 Heritage Auctions",
+        "Danger Girl #4 August 1998 Image Comics sold price 7.5 ComicLink",
+        "Danger Girl #4 August 1998 Image Comics sold price 7.5 MyComicShop",
+        "Danger Girl #4 December 1998 Image Comics CGC 7.5 sold eBay",
+        "Danger Girl #4 December 1998 Image Comics raw 7.5 sold eBay",
+        "Danger Girl #4 December 1998 Image Comics VF- sold eBay",
+        "GoCollect Danger Girl #4 December 1998 7.5 sales",
+        "Heritage Auctions Danger Girl #4 December 1998 7.5 sold",
+        "ComicLink Danger Girl #4 December 1998 7.5 sold",
+        "MyComicShop Danger Girl #4 December 1998 7.5 sold"
+      ],
+      "sources": [
+        {
+          "title": "mycomicshop.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESsW9jQnl-Bcjvv8Wj3CQc4zHOsF09cgeQ-Pzw77kgJbOlfGZJOSSuAdh95xdqAVdMul9lrQEbozVDfKCla0UtgaZgq0Cmiae18RvqFfivglgn1_C5_zKwwbGQcmNJLymIhmYAqwbtJQ=="
+        },
+        {
+          "title": "wikipedia.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCrObbmpWxJSb2z0nyKDQfWsnlT25CZSIELBApLtWwj2Ue4Hz9ydfNsXXop2S0OtQ4otqVAPZkm_QhDxWbB30YyNQ032ULTlyK0qJ3s_5moHKr7Hdbf8A1qOoBFxYFnX7YzCl9YbA="
+        },
+        {
+          "title": "gocollect.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE67jwaNGLtkss7VfugxLeMDOFnaaRrfubnryIZ7udjfs69TVdjnnV6ZWHKH737d5wYyJ_WsXHNNN7fEg4KZ6ZEG0hyDSpPYvNeOwaSETlZOZUZZXAD--QpsDOVyPoC7W8Iaa_3"
+        }
+      ],
+      "grounding_used": true
+    }
+  }
+}

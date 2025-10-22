@@ -1,0 +1,73 @@
+{
+  "image_filename": "IMG_4096.jpeg",
+  "success": true,
+  "processing_time": 409.6237931251526,
+  "error_message": null,
+  "valuation": {
+    "series": "Iron Man",
+    "title": "Iron Man",
+    "issue_number": "1",
+    "publisher": "Marvel Comics",
+    "publication_date": "November 1996",
+    "estimated_grade": "8.0",
+    "condition_notes": [
+      "Minor blunting/crease on top left corner",
+      "Slight ding on bottom right corner",
+      "Minor surface wear"
+    ],
+    "key_issue": true,
+    "key_issue_notes": "First issue of Iron Man (Vol. 2), part of the Heroes Reborn relaunch.",
+    "rarity_notes": "Not considered rare due to high print runs typical of major relaunches in the 1990s, but significant for collectors of the Heroes Reborn era.",
+    "valuation": {
+      "low_estimate": 15.0,
+      "best_estimate": 18.0,
+      "high_estimate": 20.0,
+      "confidence": 0.5
+    },
+    "image_filename": "IMG_4096.jpeg",
+    "analysis_date": "2025-10-20T14:08:34.599037",
+    "llm_provider": "gemini-gemini-2.5-flash",
+    "identification_confidence": 0.95,
+    "analysis_notes": "This comic is Iron Man (Vol. 2) #1, published as part of Marvel's 'Heroes Reborn' initiative. This relaunch, which began in 1996, saw several core Marvel characters' continuities rebooted and their origins retold by creators from Image Comics. This specific issue was handled by Jim Lee's WildStorm Productions studio. The cover features Iron Man in a redesigned armor, heavily wired and connected, reflecting the technological and often intricate art styles prevalent in comics of that period. | Market data: Searches: Iron Man #1 November 1996 8.0 GPA sold prices, Iron Man #1 November 1996 8.0 GoCollect sold prices, Iron Man #1 November 1996 8.0 Heritage Auctions sold prices, Iron Man #1 November 1996 8.0 eBay sold listings, Iron Man #1 November 1996 8.0 MyComicShop sold prices, Iron Man #1 November 1996 8.0 ComicLink sold prices, Iron Man #1 Heroes Reborn 1996 8.0 GPA sold prices, Iron Man #1 Heroes Reborn 1996 8.0 GoCollect sold prices, Iron Man #1 Heroes Reborn 1996 8.0 Heritage Auctions sold prices, Iron Man #1 Heroes Reborn 1996 8.0 eBay sold listings, Iron Man #1 Heroes Reborn 1996 8.0 MyComicShop sold prices, Iron Man #1 Heroes Reborn 1996 8.0 ComicLink sold prices, Iron Man #1 November 1996 CGC 8.0 sold price eBay, Iron Man #1 Heroes Reborn 1996 CGC 8.0 sold price GoCollect, Iron Man #1 Heroes Reborn 1996 CGC 8.0 sold price Heritage Auctions, Iron Man #1 Heroes Reborn 1996 CGC 8.0 sold price ComicLink, Iron Man #1 Heroes Reborn 1996 CGC 8.0 sold price GPA | Sources: gocollect.com, pricecharting.com, mycomicshop.com, gocollect.com",
+    "grounding_metadata": {
+      "search_queries": [
+        "Iron Man #1 November 1996 8.0 GPA sold prices",
+        "Iron Man #1 November 1996 8.0 GoCollect sold prices",
+        "Iron Man #1 November 1996 8.0 Heritage Auctions sold prices",
+        "Iron Man #1 November 1996 8.0 eBay sold listings",
+        "Iron Man #1 November 1996 8.0 MyComicShop sold prices",
+        "Iron Man #1 November 1996 8.0 ComicLink sold prices",
+        "Iron Man #1 Heroes Reborn 1996 8.0 GPA sold prices",
+        "Iron Man #1 Heroes Reborn 1996 8.0 GoCollect sold prices",
+        "Iron Man #1 Heroes Reborn 1996 8.0 Heritage Auctions sold prices",
+        "Iron Man #1 Heroes Reborn 1996 8.0 eBay sold listings",
+        "Iron Man #1 Heroes Reborn 1996 8.0 MyComicShop sold prices",
+        "Iron Man #1 Heroes Reborn 1996 8.0 ComicLink sold prices",
+        "Iron Man #1 November 1996 CGC 8.0 sold price eBay",
+        "Iron Man #1 Heroes Reborn 1996 CGC 8.0 sold price GoCollect",
+        "Iron Man #1 Heroes Reborn 1996 CGC 8.0 sold price Heritage Auctions",
+        "Iron Man #1 Heroes Reborn 1996 CGC 8.0 sold price ComicLink",
+        "Iron Man #1 Heroes Reborn 1996 CGC 8.0 sold price GPA"
+      ],
+      "sources": [
+        {
+          "title": "gocollect.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSvBzYTQcrK3F2B9YTBK-I392wnNt9Hoq0KsUxbYdgq3MO03kVz6X3GD9qfHAGJUX2onjXWHWuK0ygJ3adPDBieFC1F9N3JZNtT8KdXgvhw3RPcvbSv-JgOYNCJoFHZUuys1k="
+        },
+        {
+          "title": "pricecharting.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEl-Xapx7JWkyxgfBSbtpIB8-P05ntuCLA6-3xAy3jhBoHuigCPfo9Fb95lOFtOliFyyOiW86jzldwCXZx3-72L6f_vl1Kx255U3cPRbFZ5BD_KoE74aXxblF1EOI7JYJbPHioRaJ71sQvz_DrG665K-R0FC65_03522ZYRgEu7MENv"
+        },
+        {
+          "title": "mycomicshop.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0uCtBJbH5Cbynj5mLh19-ivSVBBx2OlsiwTvucbDbfa45_1VPmDQWp12MWDOYlBPVauMoCoKwA63WKgEXBQgXYzxu_Dr902YiL9b_Hy3kq8Jpnd1wUk9A-y6v4_0MX7HWkmyU9Cxn"
+        },
+        {
+          "title": "gocollect.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqSBBL-yGb6pHNcnabjbgcp9bOf-kiz_1Z3-konG9Nz3ZzBtYkUotI3POU89gTuLDKXptNsv0n0gMzOmLnHbTAilYsQHEdZXg2GQF5eb2qVExr7sxeO81JB0X4gBDLoGLalw=="
+        }
+      ],
+      "grounding_used": true
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "image_filename": "IMG_4094.jpeg",
+  "success": true,
+  "processing_time": 47.24622893333435,
+  "error_message": null,
+  "valuation": {
+    "series": "Iron Man",
+    "title": "Iron Man",
+    "issue_number": "305",
+    "publisher": "Marvel Comics",
+    "publication_date": "June 1994",
+    "estimated_grade": "6.5",
+    "condition_notes": [
+      "Spine stress with color breaks",
+      "Blunted corners",
+      "Minor edge wear"
+    ],
+    "key_issue": false,
+    "key_issue_notes": "Features a prominent fight between Iron Man and Hulk on the cover, but not considered a major key issue for first appearances or significant events. This issue is part of the ongoing first volume of Iron Man.",
+    "rarity_notes": "Common issue for the era, not considered rare.",
+    "valuation": {
+      "low_estimate": 16.05,
+      "best_estimate": 17.5,
+      "high_estimate": 19.0,
+      "confidence": 0.4
+    },
+    "image_filename": "IMG_4094.jpeg",
+    "analysis_date": "2025-10-20T14:06:20.814488",
+    "llm_provider": "gemini-gemini-2.5-flash",
+    "identification_confidence": 0.95,
+    "analysis_notes": "The comic is identified as Iron Man #305 from June 1994. The cover depicts Iron Man fighting the Hulk. Condition shows moderate wear, primarily spine stress with color breaks along the spine and blunted corners, consistent with a mid-grade copy. | Market data: Searches: Iron Man #305 June 1994 6.5 GPA sold price, Iron Man #305 June 1994 6.5 GoCollect sold price, Iron Man #305 June 1994 6.5 Heritage Auctions sold price, Iron Man #305 June 1994 6.5 eBay sold listings, Iron Man #305 June 1994 6.5 MyComicShop sold price, Iron Man #305 June 1994 6.5 ComicLink sold price, Iron Man #305 (1994) 6.5 sold, Iron Man #305 June 1994 CGC 6.0 sold price, Iron Man #305 June 1994 CGC 7.0 sold price, Iron Man #305 June 1994 Heritage Auctions sold 6.5, Iron Man #305 June 1994 eBay sold 6.5, Iron Man #305 June 1994 ComicLink sold 6.5, Iron Man #305 June 1994 GPA sales data | Sources: gocollect.com, pricecharting.com",
+    "grounding_metadata": {
+      "search_queries": [
+        "Iron Man #305 June 1994 6.5 GPA sold price",
+        "Iron Man #305 June 1994 6.5 GoCollect sold price",
+        "Iron Man #305 June 1994 6.5 Heritage Auctions sold price",
+        "Iron Man #305 June 1994 6.5 eBay sold listings",
+        "Iron Man #305 June 1994 6.5 MyComicShop sold price",
+        "Iron Man #305 June 1994 6.5 ComicLink sold price",
+        "Iron Man #305 (1994) 6.5 sold",
+        "Iron Man #305 June 1994 CGC 6.0 sold price",
+        "Iron Man #305 June 1994 CGC 7.0 sold price",
+        "Iron Man #305 June 1994 Heritage Auctions sold 6.5",
+        "Iron Man #305 June 1994 eBay sold 6.5",
+        "Iron Man #305 June 1994 ComicLink sold 6.5",
+        "Iron Man #305 June 1994 GPA sales data"
+      ],
+      "sources": [
+        {
+          "title": "gocollect.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo8-qw1opSEQk6uj0nkLZA6mmv4b_DV-J5yWyK0LdvdWbGaqE8cvlVQ7B6n4ly6wwCcQIbkXQqdBEeVEwXEwWMDx0w5VOzikuH15Qb3QBDM5WeuSwlP2hmVDN9QMqzSMbvlTM="
+        },
+        {
+          "title": "pricecharting.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQlLZzjkQ2v_X4wSWLMP6YF-dmeymWDmav4dzWTbuAyox8WR0wZMsOx3iI_V4fiYIFTqBv20OwlwUz3Gu6rdhp6-OVFoDG7BZFC8mEymHUtbx1XQvRGnGdoCKZP8jzBuepm-GZbUAPFZ9ipbhSIRII4JP-xXJiF9XG2V3jSX7GNarIsVg="
+        }
+      ],
+      "grounding_used": true
+    }
+  }
+}

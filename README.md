@@ -1,180 +1,323 @@
 # Comic Book Valuation System
 
-AI-powered comic book valuation using OpenAI's latest vision models with structured outputs for maximum reliability.
+AI-powered comic book valuation system using state-of-the-art vision models to analyze, grade, and estimate values for comic book collections. Features resumable processing, batch operations, and support for both OpenAI and Google Gemini models.
 
-## Features
+## ✨ Key Features
 
-- **Reliable Analysis**: Uses OpenAI's structured outputs to guarantee valid JSON responses
-- **Professional Prompting**: Anti-hallucination techniques for accurate valuations
-- **Batch Processing**: Process 200-300 images efficiently with concurrency control
-- **Model Comparison**: Compare results from different OpenAI models (e.g., gpt-4o vs gpt-4o-mini)
-- **Structured Data**: Consistent schema for series, issue, grade, condition, and valuation
-- **Cost Estimation**: Preview processing costs before running
-- **Rich CLI**: Beautiful command-line interface with progress tracking
+- **🤖 Multi-Provider Support**: Works with OpenAI GPT-4o/GPT-4o-mini and Google Gemini models
+- **📊 Structured Output**: Guaranteed valid JSON responses with comprehensive comic metadata
+- **🔄 Resumable Processing**: Interrupt and resume batch processing without losing progress
+- **⚡ Efficient Batch Processing**: Handle hundreds of images with configurable concurrency
+- **💾 Smart Caching**: Automatically skips already-processed images
+- **🔍 Google Search Grounding**: Gemini models can search for real-time pricing data
+- **📈 Model Comparison**: Compare valuations between different AI models
+- **💰 Cost Estimation**: Preview processing costs before running
+- **🎨 Rich CLI**: Beautiful command-line interface with progress tracking
+- **📝 Multiple Output Formats**: JSON and CSV exports with detailed metadata
 
-## Quick Start
+## 🚀 Quick Start
 
-### 1. Install Dependencies
+### Prerequisites
+
+- Python 3.8+
+- OpenAI API key and/or Google Gemini API key
+- Comic book images (JPEG, PNG, WEBP supported)
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/comics-valuation.git
+cd comics-valuation
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Set Up API Key
-
-Create a `.env` file with your OpenAI API key:
+### Initial Setup
 
 ```bash
-echo "OPENAI_API_KEY=your-actual-api-key-here" > .env
-```
-
-### 3. Create Configuration
-
-```bash
+# 1. Create configuration file
 python cli.py init
-```
 
-This creates `config.json`. Edit the file to add your OpenAI API key and set your comics directory path.
+# 2. Edit config.json with your settings:
+#    - Add your API key(s)
+#    - Set your images directory path
+#    - Choose your AI provider and model
 
-### 4. Test Single Image
+# 3. Test with a single image
+python cli.py analyze-single path/to/comic.jpg
 
-```bash
-python cli.py analyze-single ~/Desktop/comics/IMG_4089.jpeg
-```
-
-### 5. Process All Images
-
-```bash
-# Dry run first to see what will be processed
-python cli.py process --dry-run
-
-# Run the full batch
+# 4. Process entire collection
 python cli.py process
 ```
 
-## Usage Examples
+## 📖 Configuration
 
-### Environment Variables
+The system uses two configuration components:
+- **`config.json`** - Your configuration file with API keys and settings
+- **`config.py`** - Python module that loads, validates, and manages configuration
 
-Instead of config file, you can use environment variables:
-
-```bash
-export OPENAI_API_KEY="your-key-here"
-export COMICS_IMAGES_DIR="./images"
-export COMICS_OUTPUT_DIR="./results"
-export OPENAI_MODEL="gpt-4o"
-
-python cli.py process
-```
-
-### Single Image Analysis
-
-```bash
-# Basic analysis
-python cli.py analyze-single comic1.jpg
-
-# Compare two models
-python cli.py analyze-single comic1.jpg --compare
-
-# Override model
-python cli.py analyze-single comic1.jpg --model gpt-5
-```
-
-### Batch Processing
-
-```bash
-# Process all images with default settings
-python cli.py process
-
-# Override directories
-python cli.py process --images-dir ./my-comics --output-dir ./my-results
-
-# Use different model
-python cli.py process --model gpt-5
-
-# Preview what would be processed
-python cli.py process --dry-run
-```
-
-## Output Format
-
-Results are saved as structured JSON with this schema:
+Create or edit `config.json`:
 
 ```json
 {
-  "series": "Amazing Spider-Man",
-  "title": "The Night Gwen Stacy Died", 
-  "issue_number": "121",
+  "provider": "gemini",              // "openai" or "gemini"
+  "images_directory": "./images",    // Path to comic images
+  "output_directory": "./results",   // Where to save results
+  
+  // OpenAI Configuration
+  "openai_api_key": "sk-...",       
+  "primary_model": "gpt-4o-mini",   // or "gpt-4o"
+  
+  // Gemini Configuration  
+  "gemini_api_key": "...",
+  "gemini_model": "gemini-2.5-flash",
+  "enable_grounding": true,          // Enable Google search
+  
+  // Processing Settings
+  "max_concurrent": 5,              // Parallel requests
+  "retry_attempts": 3,               // Retries per image
+  "retry_delay": 2.0,               // Seconds between retries
+  
+  // Output Settings
+  "save_json": true,
+  "save_csv": true,
+  "save_intermediate": true          // Enable resumable processing
+}
+```
+
+You can also use environment variables instead of or to override `config.json`:
+```bash
+export OPENAI_API_KEY="sk-..."
+export GEMINI_API_KEY="..."
+export COMICS_IMAGES_DIR="./my-comics"
+export COMICS_OUTPUT_DIR="./my-results"
+export COMICS_PROVIDER="gemini"
+export COMICS_MODEL="gemini-2.0-flash-exp"
+```
+
+The `config.py` module handles loading from both sources, with environment variables taking precedence.
+
+## 🎮 CLI Commands
+
+### Basic Commands
+
+```bash
+# Initialize configuration
+python cli.py init
+
+# Process all images
+python cli.py process [--dry-run]
+
+# Analyze single image
+python cli.py analyze-single <image_path> [--compare]
+
+# Compare models on single image
+python cli.py analyze-single comic.jpg --compare
+```
+
+### Resumable Processing Commands
+
+```bash
+# Check processing status
+python cli.py status [--detailed]
+
+# Resume interrupted processing
+python cli.py resume
+
+# Validate intermediate results
+python cli.py validate
+
+# Clean up failed/corrupted results
+python cli.py clean [--failed] [--corrupted] [--dry-run]
+```
+
+## 🔄 Resumable Processing
+
+The system saves progress after each image, allowing you to:
+
+- **Interrupt safely** with Ctrl+C without losing work
+- **Resume automatically** from where you left off
+- **Skip completed images** on subsequent runs
+- **Retry failed images** with transient errors
+- **Clean corrupted results** before resuming
+
+### How It Works
+
+1. Each processed image gets saved to `results/intermediate/`
+2. On resume, the system checks existing results
+3. Successfully processed images are skipped
+4. Failed images with retryable errors are reprocessed
+5. Final results are compiled when processing completes
+
+### Error Handling
+
+**Retryable Errors** (automatically retried):
+- Network timeouts
+- Rate limiting
+- Temporary API errors
+- JSON parsing errors
+
+**Permanent Errors** (skipped on resume):
+- Invalid API responses
+- Validation errors
+- Authentication failures
+
+## 📊 Output Format
+
+### JSON Structure
+```json
+{
+  "series": "The Amazing Spider-Man",
+  "title": "The Final Chapter",
+  "issue_number": "441",
   "publisher": "Marvel Comics",
-  "publication_date": "1973-06",
-  "estimated_grade": "7.5",
-  "condition_notes": ["Minor spine stress", "Small corner crease"],
+  "publication_date": "1998-11",
+  "estimated_grade": "8.0",
+  "condition_notes": ["Minor spine stress", "Light corner wear"],
   "key_issue": true,
-  "key_issue_notes": "Death of Gwen Stacy",
+  "key_issue_notes": "Final issue before relaunch",
+  "rarity_notes": "Common print run",
   "valuation": {
-    "low_estimate": 450.00,
-    "best_estimate": 650.00, 
-    "high_estimate": 850.00,
-    "confidence": 0.8
+    "low_estimate": 15.00,
+    "best_estimate": 25.00,
+    "high_estimate": 40.00,
+    "confidence": 0.75
   },
-  "identification_confidence": 0.95
+  "identification_confidence": 0.95,
+  "grounding_metadata": {
+    "grounding_used": true,
+    "search_queries": ["Amazing Spider-Man 441 value"],
+    "sources": [...]
+  }
 }
 ```
 
-## Cost Estimation
+### CSV Columns
+- Basic Info: Series, Title, Issue Number, Publisher, Publication Date
+- Grading: Estimated Grade, Condition Notes
+- Valuation: Low/Best/High Estimates, Confidence
+- Metadata: Key Issue Status, Rarity Notes, Analysis Notes
+- Processing: LLM Provider, Processing Time, Grounding Used
 
-Rough estimates per image:
-- **gpt-5**: ~$0.20
-- **gpt-5-mini**: ~$0.08
-- **gpt-4o**: ~$0.15
-- **gpt-4o-mini**: ~$0.05
+## 🏗️ Project Structure
 
-For 300 images with gpt-5-mini: ~$24
-
-## Configuration Options
-
-```json
-{
-  "images_directory": "./images",           // Where your comic images are
-  "output_directory": "./results",          // Where to save results
-  "openai_api_key": "sk-...",              // Your OpenAI API key
-  "primary_model": "gpt-5-mini",           // Main model to use
-  "comparison_model": "gpt-5",             // Optional second model
-  "image_extensions": [".jpg", ".png", ".gif", ".bmp", ".webp"],  // Supported file types
-  "max_concurrent": 5,                     // Concurrent API requests
-  "retry_attempts": 3,                     // Retries on failure
-  "retry_delay": 1.0,                      // Delay between retries
-  "save_json": true,                       // Save detailed JSON
-  "save_csv": true                         // Save CSV summary (coming soon)
-}
+```
+comics-valuation/
+├── cli.py                 # Main CLI interface
+├── pipeline.py            # Core processing pipeline
+├── models.py              # Data models and schemas
+├── openai_provider.py     # OpenAI integration
+├── gemini_provider.py     # Google Gemini integration
+├── config.py              # Configuration loader/validator
+├── requirements.txt       # Python dependencies
+├── config.json            # Your configuration file (created by setup)
+├── setup.py               # Interactive setup script
+├── tests.py               # Unit tests
+└── results/
+    ├── intermediate/      # Individual image results
+    ├── comic_valuations_*.json/csv  # Final outputs
+    ├── results_summary.html          # Generated HTML report (moved from repo root)
+    └── results_summary.ipynb         # Notebook copy (moved from repo root)
 ```
 
-## Supported Models
+## 🔍 Examples
 
-- `gpt-5-mini` (default) - Latest mini model, good balance of speed and accuracy
-- `gpt-5` - Latest full model, best accuracy
-- `gpt-4o` - Previous generation, reliable
-- `gpt-4o-mini` - Previous generation mini
-- `gpt-4-turbo` - Legacy model
+### Basic Processing
+```bash
+# Process with specific model
+python cli.py process --model gpt-4o-mini
 
-## Future Features
+# Process specific directory
+python cli.py process --images-dir ~/Desktop/comics
 
-- [ ] CSV export for spreadsheet analysis
-- [ ] Google Sheets integration via API
-- [ ] Collection summary reports
-- [ ] Market trend analysis
-- [ ] Condition assessment improvements
-- [ ] Bulk image preprocessing
+# Dry run to preview
+python cli.py process --dry-run
+```
 
-## Troubleshooting
+### Status Management
+```bash
+# Check current progress
+python cli.py status --detailed
+
+# Clean and retry failures
+python cli.py clean --failed
+python cli.py resume
+```
+
+### Advanced Usage
+```python
+# Programmatic usage
+from pipeline import ComicValuationPipeline
+from config import load_config
+
+config = load_config("config.json")
+pipeline = ComicValuationPipeline(config)
+
+# Process with resume support
+results = await pipeline.process_all_images()
+
+# Get status
+status = pipeline.get_intermediate_status()
+print(f"Processed: {status['successful']}/{status['total']}")
+```
+
+## 🐛 Troubleshooting
 
 ### Common Issues
 
-1. **API Key Error**: Make sure your OpenAI API key is valid and has credits
-2. **No Images Found**: Check that your images directory path is correct
-3. **Rate Limiting**: Reduce `max_concurrent` if you hit rate limits
-4. **JSON Parsing**: Should be rare with structured outputs, but check model compatibility
+**Processing seems stuck**
+```bash
+python cli.py status        # Check current state
+python cli.py clean --corrupted
+python cli.py resume
+```
 
-### Getting Help
+**Validation errors from LLM**
+- The AI sometimes returns invalid data formats
+- These are marked as permanent failures
+- Review prompts or switch models if persistent
 
-The system logs detailed information. Check the console output for specific error messages and retry information.
+**Rate limiting**
+- Reduce `max_concurrent` in config.json
+- Increase `retry_delay` for better spacing
+
+**Memory issues with large batches**
+- Process in smaller chunks
+- Use `--images-dir` to process subdirectories
+
+## 📈 Performance Tips
+
+1. **Optimal Settings**:
+   - `max_concurrent`: 3-5 for most APIs
+   - `retry_attempts`: 3 with exponential backoff
+   - Gemini models are generally faster and cheaper
+
+2. **Cost Management**:
+   - GPT-4o-mini: ~$0.05-0.08 per image
+   - Gemini Flash: ~$0.01-0.02 per image
+   - Use `--dry-run` to preview costs
+
+3. **Batch Processing**:
+   - Process 50-100 images at a time for large collections
+   - Monitor with `status` command between batches
+   - Use intermediate saves for safety
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit issues or pull requests.
+
+## 📄 License
+
+MIT License - see LICENSE file for details
+
+## 🙏 Acknowledgments
+
+- OpenAI for GPT-4 Vision API
+- Google for Gemini Vision API
+- The comic collecting community for domain expertise
+
+---
+
+**Note**: This tool provides estimates based on AI analysis. Always consult professional grading services and current market data for accurate valuations.

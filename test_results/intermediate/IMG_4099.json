@@ -1,0 +1,81 @@
+{
+  "image_filename": "IMG_4099.jpeg",
+  "success": true,
+  "processing_time": 303.4983289241791,
+  "error_message": null,
+  "valuation": {
+    "series": "Ride",
+    "title": "Ride",
+    "issue_number": "1",
+    "publisher": "Image Comics",
+    "publication_date": "October 1999",
+    "estimated_grade": "8.0",
+    "condition_notes": [
+      "Minor corner ding on bottom left",
+      "Light surface wear/scuffing visible on cover, including a circular mark on the lower half",
+      "Minimal spine stress"
+    ],
+    "key_issue": true,
+    "key_issue_notes": "First issue of the series, featuring the first appearance of the character Ride.",
+    "rarity_notes": "This is a first issue from a major independent publisher, but not considered exceptionally rare.",
+    "valuation": {
+      "low_estimate": 1.0,
+      "best_estimate": 5.0,
+      "high_estimate": 10.0,
+      "confidence": 0.0
+    },
+    "image_filename": "IMG_4099.jpeg",
+    "analysis_date": "2025-10-20T14:14:03.905420",
+    "llm_provider": "gemini-gemini-2.5-flash",
+    "identification_confidence": 0.95,
+    "analysis_notes": "The comic is clearly identified as 'Ride' issue #1 from Image Comics. The publication date of October 1999 was determined by cross-referencing the series and issue number with comic databases, as no date was explicitly visible on the cover. The condition is estimated at 8.0 (Very Fine) due to minor corner wear and visible surface scuffing, particularly a circular mark on the lower cover, but otherwise presents well with a relatively flat spine. | Market data: Searches: Ride #1 Image Comics October 1999 8.0 GPA sold prices, Ride #1 Image Comics October 1999 8.0 GoCollect sold prices, Ride #1 Image Comics October 1999 8.0 Heritage Auctions sold prices, Ride #1 Image Comics October 1999 8.0 eBay sold listings, Ride #1 Image Comics October 1999 8.0 MyComicShop sold prices, Ride #1 Image Comics October 1999 8.0 ComicLink sold prices, Image Comics The Ride #1 October 1999 8.0 sold price GPA, Image Comics The Ride #1 October 1999 8.0 sold price GoCollect, Image Comics The Ride #1 October 1999 8.0 Heritage Auctions sold, Image Comics The Ride #1 October 1999 8.0 eBay sold, Image Comics The Ride #1 October 1999 8.0 MyComicShop sold, Image Comics The Ride #1 October 1999 8.0 ComicLink sold, Image Comics The Ride #1 October 1999 sold prices | Sources: gocollect.com, ebay.com, ebay.com, ebay.com, mycomicshop.com",
+    "grounding_metadata": {
+      "search_queries": [
+        "Ride #1 Image Comics October 1999 8.0 GPA sold prices",
+        "Ride #1 Image Comics October 1999 8.0 GoCollect sold prices",
+        "Ride #1 Image Comics October 1999 8.0 Heritage Auctions sold prices",
+        "Ride #1 Image Comics October 1999 8.0 eBay sold listings",
+        "Ride #1 Image Comics October 1999 8.0 MyComicShop sold prices",
+        "Ride #1 Image Comics October 1999 8.0 ComicLink sold prices",
+        "Image Comics The Ride #1 October 1999 8.0 sold price GPA",
+        "Image Comics The Ride #1 October 1999 8.0 sold price GoCollect",
+        "Image Comics The Ride #1 October 1999 8.0 Heritage Auctions sold",
+        "Image Comics The Ride #1 October 1999 8.0 eBay sold",
+        "Image Comics The Ride #1 October 1999 8.0 MyComicShop sold",
+        "Image Comics The Ride #1 October 1999 8.0 ComicLink sold",
+        "Image Comics The Ride #1 October 1999 sold prices"
+      ],
+      "sources": [
+        {
+          "title": "gocollect.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcp1fefF_Ed1jP_zdGAOD3ytdXbiQcH80zVpATZJRI9BeAMiuHp6J3Lz1jSam1V6AfdI3SeyxfUiV44ZLF2LIxPYGNlbBHySYSpNhsWQ1Wj4M0PDAoFNzvrpCEkdqO4osY"
+        },
+        {
+          "title": "ebay.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM0Dzz8zHy_gZWBJZ71nNu61Drbb4ZYGLVZ-6H0CHYKMxeM17nmvk1YSJ_13bm1ZbW21qFeohVHerseaS1CLM-jwquxu2WAXCB4OxmR3uPCJZDjptn7VDU3RuVnFlYP9Y="
+        },
+        {
+          "title": "ebay.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHm8gb_6QqClY1TZjxM-tUSD4tDMEOGLvbGjufsNuuyff5oEiKqVN8haw6UuvHaBmqiDqpS1XTqT4zlfVT6t5uvnWehCRWeKBbkqULRY3Bmh6QfpqlrvxjgTBX6fieFvZs="
+        },
+        {
+          "title": "ebay.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlQZaVnd9HemZsMAkAZ06-yvoRahZVNg1gXxeIFkwTDX_JqBi_ieJfG9XlrkxUAS--ZZUOiVDFR3UhowE8_sHF8uFFJKwZ3Vfpx0MIluvbVar9cUzGDuguN3waGHDezMA="
+        },
+        {
+          "title": "mycomicshop.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGokJiIIO3sEUSAm9ibSQf4LaHWoSY7PHhBQvHfsfn4_Qk29V8uaAUog5WGQOofKLnVcHubwiW0_HFGWnPvtjfFVzVggBXneVr1z5LKyYa8f_O6XgpKHHYo_10kYEcRTzqY5j7_gbs7NQ=="
+        },
+        {
+          "title": "ha.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsvUUn4ELc__gliZwEauS3us_kW0hxOrCa5a6Ge0sEBe3Ya_PzNSURDGotzPzrbaxX2miKOrzGzHlFny0lsln-_ua6oQ5C7UIl4JDFAds_KXr8RNQSq8TnDE0rkirzql8AO4M3-reTqX4r3yBSzp9r6IvAHWEq2HMNXXNG5bkIbpuePymopH-ApRfKkssI-zWpIfrnJMmKB1MpTw1BQ3h_UANmlDKd9arMfMYDnZ0HytmbyNDufodYKrUQMkOW8uJH2deL-w=="
+        },
+        {
+          "title": "comichron.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoo1Ro6Zj8SZXyHihQWrk0njqcmXO0RysvJ8sCF9CvuhaJTFo3HM8ZK0BLhRO6anRK8oHQpPnOFFs1zoRv3H-IQH2QVdcsZGhngHGCrICnKg-Fa2jqAUH1BxY1VjU7p-057lUQn22Iq_mrVDl4t9YVndRAl4XaKbCf"
+        }
+      ],
+      "grounding_used": true
+    }
+  }
+}

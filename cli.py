@@ -6,6 +6,7 @@ from typing import Optional
 import typer
 from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, TextColumn
+from rich.table import Table
 
 from config import Config, load_config, create_example_config
 from pipeline import ComicValuationPipeline
@@ -132,6 +133,241 @@ def analyze_single(
                 display_valuation(result.valuation)
             else:
                 console.print(f"✗ Analysis failed: {result.error_message}", style="red")
+
+    except Exception as e:
+        console.print(f"✗ Error: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@app.command()
+def status(
+    config_path: Optional[str] = typer.Option(None, help="Path to config file"),
+    output_dir: Optional[str] = typer.Option(None, help="Override output directory"),
+    detailed: bool = typer.Option(False, help="Show detailed status for each file")
+):
+    """Check status of intermediate processing results"""
+    try:
+        config = load_config(config_path)
+        if output_dir:
+            config.output_directory = output_dir
+
+        pipeline = ComicValuationPipeline(config)
+        status = pipeline.get_intermediate_status()
+
+        console.print("\n📊 Intermediate Results Status:", style="bold blue")
+        console.print(f"📁 Output directory: {config.output_directory}/intermediate")
+        console.print(f"📄 Total files: {status['total']}")
+        console.print(f"✅ Successful: {status['successful']}", style="green")
+        console.print(f"❌ Failed: {status['failed']}", style="red")
+        console.print(f"⚠️  Corrupted: {status['corrupted']}", style="yellow")
+
+        if detailed and status['details']:
+            console.print("\n📋 Detailed Status:", style="bold")
+
+            # Create a table
+            table = Table(show_header=True, header_style="bold magenta")
+            table.add_column("Image File", style="cyan")
+            table.add_column("Status", justify="center")
+            table.add_column("Error", style="red")
+            table.add_column("Has Valuation", justify="center")
+
+            for detail in status['details']:
+                status_icon = "✅" if detail['success'] else "❌"
+                has_val = "✓" if detail['has_valuation'] else "✗"
+                error_text = detail['error'] if detail['error'] else "-"
+
+                table.add_row(
+                    detail['image'],
+                    status_icon,
+                    error_text[:50] + "..." if len(error_text) > 50 else error_text,
+                    has_val
+                )
+
+            console.print(table)
+
+        # Get image files to see what still needs processing
+        image_files = pipeline.get_image_files()
+        processed_images = {d['image'] for d in status['details']}
+        remaining = [f for f in image_files if f.name not in processed_images]
+
+        if remaining:
+            console.print(f"\n📷 Remaining images to process: {len(remaining)}")
+            if len(remaining) <= 10:
+                for img in remaining:
+                    console.print(f"  • {img.name}")
+
+    except Exception as e:
+        console.print(f"✗ Error: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@app.command()
+def clean(
+    config_path: Optional[str] = typer.Option(None, help="Path to config file"),
+    output_dir: Optional[str] = typer.Option(None, help="Override output directory"),
+    failed: bool = typer.Option(False, help="Remove failed results (retryable errors only)"),
+    corrupted: bool = typer.Option(True, help="Remove corrupted JSON files"),
+    dry_run: bool = typer.Option(False, help="Show what would be removed without actually removing")
+):
+    """Clean up intermediate processing results"""
+    try:
+        config = load_config(config_path)
+        if output_dir:
+            config.output_directory = output_dir
+
+        pipeline = ComicValuationPipeline(config)
+
+        if dry_run:
+            # First get status to show what would be cleaned
+            status = pipeline.get_intermediate_status()
+
+            console.print("\n🧹 Cleanup Preview (DRY RUN):", style="bold yellow")
+            console.print(f"📁 Output directory: {config.output_directory}/intermediate")
+
+            to_remove = 0
+            if corrupted:
+                console.print(f"  Would remove {status['corrupted']} corrupted files", style="yellow")
+                to_remove += status['corrupted']
+
+            if failed:
+                # Count retryable failed results
+                retryable = 0
+                for detail in status['details']:
+                    if not detail['success'] and detail['error']:
+                        error_msg = detail['error'].lower()
+                        if any(err in error_msg for err in ["could not convert string to float: ''", "timeout", "rate limit", "connection error"]):
+                            retryable += 1
+                console.print(f"  Would remove {retryable} failed results (retryable errors)", style="yellow")
+                to_remove += retryable
+
+            console.print(f"\nTotal files to remove: {to_remove}")
+            console.print("Run without --dry-run to actually clean up")
+
+        else:
+            console.print("\n🧹 Cleaning intermediate results...", style="bold")
+
+            result = pipeline.clean_intermediate_results(
+                remove_failed=failed,
+                remove_corrupted=corrupted
+            )
+
+            console.print(f"✅ Cleanup complete!", style="green")
+            console.print(f"  Removed {result['removed']} files")
+
+            if result['failed']:
+                console.print(f"  Failed results removed: {len(result['failed'])}")
+
+            if result['corrupted']:
+                console.print(f"  Corrupted files removed: {len(result['corrupted'])}")
+
+    except Exception as e:
+        console.print(f"✗ Error: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@app.command()
+def validate(
+    config_path: Optional[str] = typer.Option(None, help="Path to config file"),
+    output_dir: Optional[str] = typer.Option(None, help="Override output directory"),
+    show_issues: bool = typer.Option(True, help="Show detailed validation issues")
+):
+    """Validate intermediate processing results"""
+    try:
+        config = load_config(config_path)
+        if output_dir:
+            config.output_directory = output_dir
+
+        pipeline = ComicValuationPipeline(config)
+        validation = pipeline.validate_intermediate_results()
+
+        console.print("\n🔍 Validation Results:", style="bold blue")
+        console.print(f"📁 Output directory: {config.output_directory}/intermediate")
+        console.print(f"✅ Valid files: {validation['valid']}", style="green")
+        console.print(f"❌ Invalid files: {validation['invalid']}", style="red")
+
+        if show_issues and validation['issues']:
+            console.print("\n⚠️  Validation Issues:", style="bold yellow")
+
+            table = Table(show_header=True, header_style="bold magenta")
+            table.add_column("File", style="cyan")
+            table.add_column("Issue", style="yellow")
+
+            for issue in validation['issues']:
+                table.add_row(
+                    issue['file'],
+                    issue['issue']
+                )
+
+            console.print(table)
+
+            console.print("\n💡 Tip: Use 'clean --failed --corrupted' to remove problematic files")
+
+    except Exception as e:
+        console.print(f"✗ Error: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@app.command()
+def resume(
+    config_path: Optional[str] = typer.Option(None, help="Path to config file"),
+    images_dir: Optional[str] = typer.Option(None, help="Override images directory"),
+    output_dir: Optional[str] = typer.Option(None, help="Override output directory"),
+    model: Optional[str] = typer.Option(None, help="Override OpenAI model"),
+    retry_failed: bool = typer.Option(True, help="Retry previously failed images")
+):
+    """Resume processing from where it left off (skip already completed images)"""
+    try:
+        # Load configuration
+        config = load_config(config_path)
+
+        # Apply CLI overrides
+        if images_dir:
+            config.images_directory = images_dir
+        if output_dir:
+            config.output_directory = output_dir
+        if model:
+            config.primary_model = model
+
+        console.print("🔄 Resuming Comic Book Valuation Processing", style="bold blue")
+        console.print(f"📁 Images directory: {config.images_directory}")
+        console.print(f"📤 Output directory: {config.output_directory}")
+        console.print(f"🤖 Model: {config.primary_model}")
+
+        # Check current status
+        pipeline = ComicValuationPipeline(config)
+        status = pipeline.get_intermediate_status()
+
+        console.print(f"\n📊 Current Progress:")
+        console.print(f"  ✅ Already completed: {status['successful']}")
+        console.print(f"  ❌ Failed: {status['failed']}")
+        console.print(f"  ⚠️  Corrupted: {status['corrupted']}")
+
+        # Clean up corrupted files before resuming
+        if status['corrupted'] > 0:
+            console.print(f"\n🧹 Cleaning {status['corrupted']} corrupted files...")
+            pipeline.clean_intermediate_results(remove_failed=False, remove_corrupted=True)
+
+        # Optionally clean retryable failures
+        if retry_failed and status['failed'] > 0:
+            console.print(f"\n🔄 Preparing to retry failed images...")
+            result = pipeline.clean_intermediate_results(remove_failed=True, remove_corrupted=False)
+            if result['failed']:
+                console.print(f"  Removed {len(result['failed'])} retryable failed results")
+
+        # Run the processing pipeline with skip_existing enabled
+        console.print(f"\n▶️  Starting/resuming processing...")
+        results = asyncio.run(process_all(config))
+
+        console.print("\n📊 Processing Summary:", style="bold")
+        console.print(f"✓ Successful: {results.successful}")
+        console.print(f"✗ Failed: {results.failed}")
+        console.print(f"⏱ Total time: {results.total_processing_time:.1f}s")
+
+        if results.failed > 0:
+            console.print("\n❌ Failed images:", style="red")
+            for result in results.results:
+                if not result.success:
+                    console.print(f"  • {result.image_filename}: {result.error_message}")
 
     except Exception as e:
         console.print(f"✗ Error: {e}", style="red")

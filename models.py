@@ -10,9 +10,11 @@ class ConditionGrade(str, Enum):
     NEAR_MINT_PLUS = "9.8"
     NEAR_MINT = "9.6"
     NEAR_MINT_MINUS = "9.2"
+    NEAR_MINT_LOW = "9.0"  # Added for Gemini compatibility
     VERY_FINE_PLUS = "8.5"
     VERY_FINE = "8.0"
     VERY_FINE_MINUS = "7.5"
+    FINE_VERY_FINE = "7.0"  # Added for Gemini compatibility
     FINE_PLUS = "6.5"
     FINE = "6.0"
     FINE_MINUS = "5.5"
@@ -66,6 +68,9 @@ class ComicValuation(BaseModel):
     # Quality indicators
     identification_confidence: float = Field(..., ge=0, le=1, description="Confidence in comic identification")
     analysis_notes: str = Field(..., description="Additional analysis notes or observations")
+
+    # Grounding metadata (Gemini-specific)
+    grounding_metadata: Optional[dict] = Field(None, description="Google Search grounding data with queries and source URLs")
 
 
 class ProcessingResult(BaseModel):

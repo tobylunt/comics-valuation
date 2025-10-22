@@ -97,12 +97,77 @@ class ComicValuationPipeline:
         if result.valuation:
             result_data["valuation"] = result.valuation.model_dump()
 
-        with open(json_path, 'w') as f:
-            json.dump(result_data, f, indent=2, default=str)
+        try:
+            with open(json_path, 'w') as f:
+                json.dump(result_data, f, indent=2, default=str)
+            logger.debug(f"Saved intermediate result to {json_path}")
+        except Exception as e:
+            logger.error(f"Failed to save intermediate result for {result.image_filename}: {e}")
 
-    async def process_single_image(self, image_path: Path, save_intermediate: bool = False) -> ProcessingResult:
+    async def process_single_image(self, image_path: Path, save_intermediate: bool = False, skip_existing: bool = True) -> ProcessingResult:
         """Process a single image file"""
         start_time = time.time()
+
+        # Check if we already have an intermediate result for this image
+        if skip_existing and save_intermediate:
+            output_dir = Path(self.config.output_directory) / "intermediate"
+            filename = Path(image_path).stem
+            json_path = output_dir / f"{filename}.json"
+
+            if json_path.exists():
+                try:
+                    with open(json_path, 'r') as f:
+                        existing_data = json.load(f)
+
+                    # Check if this was a successful processing
+                    if existing_data.get('success'):
+                        logger.info(f"⊙ Skipping {image_path.name} (already completed successfully)")
+
+                        # Reconstruct the valuation if present
+                        valuation = None
+                        if 'valuation' in existing_data and existing_data['valuation']:
+                            try:
+                                valuation = ComicValuation(**existing_data['valuation'])
+                            except Exception as e:
+                                logger.warning(f"Could not reconstruct valuation for {image_path.name}: {e}")
+
+                        return ProcessingResult(
+                            image_filename=existing_data.get('image_filename', image_path.name),
+                            success=True,
+                            valuation=valuation,
+                            processing_time=existing_data.get('processing_time', 0.0),
+                            error_message=None
+                        )
+                    else:
+                        # Check if this was a known error that we should skip
+                        error_msg = existing_data.get('error_message', '').strip()
+
+                        # List of errors that indicate we should retry
+                        retryable_errors = [
+                            "could not convert string to float: ''",
+                            "timeout",
+                            "rate limit",
+                            "connection error"
+                        ]
+
+                        should_retry = any(err in error_msg.lower() for err in retryable_errors) if error_msg else True
+
+                        if should_retry:
+                            logger.info(f"⟳ Retrying {image_path.name} (previous error: {error_msg or 'unknown'})")
+                        else:
+                            logger.info(f"⊗ Skipping {image_path.name} (permanent error: {error_msg})")
+                            return ProcessingResult(
+                                image_filename=existing_data.get('image_filename', image_path.name),
+                                success=False,
+                                valuation=None,
+                                processing_time=existing_data.get('processing_time', 0.0),
+                                error_message=error_msg
+                            )
+
+                except json.JSONDecodeError as e:
+                    logger.warning(f"Corrupted JSON for {image_path.name}: {e}. Will reprocess.")
+                except Exception as e:
+                    logger.warning(f"Could not load existing result for {image_path.name}: {e}. Will reprocess.")
 
         try:
             logger.info(f"Processing {image_path.name}...")
@@ -188,12 +253,18 @@ class ComicValuationPipeline:
                 total_processing_time=0.0
             )
 
+        # Check for existing intermediate results
+        output_dir = Path(self.config.output_directory) / "intermediate"
+        if output_dir.exists():
+            existing_count = len(list(output_dir.glob("*.json")))
+            logger.info(f"Found {existing_count} existing intermediate results")
+
         # Create semaphore for concurrency control
         semaphore = asyncio.Semaphore(self.config.max_concurrent)
 
         async def process_with_semaphore(image_path: Path) -> ProcessingResult:
             async with semaphore:
-                return await self.process_single_image(image_path, save_intermediate=True)
+                return await self.process_single_image(image_path, save_intermediate=True, skip_existing=True)
 
         # Process all images
         logger.info(f"Processing {len(image_files)} images with max {self.config.max_concurrent} concurrent requests")
@@ -207,9 +278,16 @@ class ComicValuationPipeline:
         failed = len(results) - successful
         total_time = (batch_end - batch_start).total_seconds()
 
+        # Count skipped vs newly processed
+        newly_processed = sum(1 for r in results if r.processing_time > 0)
+        skipped = len(results) - newly_processed
+
         logger.info(f"Batch processing complete!")
         logger.info(f"✓ Successful: {successful}/{len(results)}")
         logger.info(f"✗ Failed: {failed}/{len(results)}")
+        if skipped > 0:
+            logger.info(f"⊙ Skipped (already processed): {skipped}")
+            logger.info(f"🆕 Newly processed: {newly_processed}")
         logger.info(f"⏱ Total time: {total_time:.1f}s")
 
         return BatchResults(
@@ -318,12 +396,34 @@ class ComicValuationPipeline:
                         'Analysis Notes',
                         'LLM Provider',
                         'Analysis Date',
-                        'Processing Time (s)'
+                        'Processing Time (s)',
+                        'Grounding Used',
+                        'Search Queries',
+                        'Source URLs'
                     ])
 
                     # Data rows
                     for result in successful_results:
                         val = result.valuation
+
+                        # Extract grounding metadata if available
+                        grounding_used = 'No'
+                        search_queries = ''
+                        source_urls = ''
+
+                        if val.grounding_metadata:
+                            grounding_used = 'Yes' if val.grounding_metadata.get('grounding_used') else 'No'
+
+                            # Format search queries
+                            queries = val.grounding_metadata.get('search_queries', [])
+                            search_queries = ' | '.join(queries) if queries else ''
+
+                            # Format source URLs
+                            sources = val.grounding_metadata.get('sources', [])
+                            if sources:
+                                url_list = [f"{s.get('title', 'Unknown')}: {s.get('url', 'N/A')}" for s in sources]
+                                source_urls = ' | '.join(url_list)
+
                         writer.writerow([
                             result.image_filename,
                             val.series,
@@ -344,12 +444,214 @@ class ComicValuationPipeline:
                             val.analysis_notes,
                             val.llm_provider,
                             val.analysis_date,
-                            f"{result.processing_time:.1f}"
+                            f"{result.processing_time:.1f}",
+                            grounding_used,
+                            search_queries,
+                            source_urls
                         ])
 
                 logger.info(f"CSV saved to {csv_path}")
             else:
                 logger.warning("No successful results to export to CSV")
+
+
+    def get_intermediate_status(self) -> dict:
+        """Get status of intermediate results"""
+        output_dir = Path(self.config.output_directory) / "intermediate"
+
+        if not output_dir.exists():
+            return {
+                "total": 0,
+                "successful": 0,
+                "failed": 0,
+                "corrupted": 0,
+                "details": []
+            }
+
+        status = {
+            "total": 0,
+            "successful": 0,
+            "failed": 0,
+            "corrupted": 0,
+            "details": []
+        }
+
+        for json_path in output_dir.glob("*.json"):
+            try:
+                with open(json_path, 'r') as f:
+                    data = json.load(f)
+
+                status["total"] += 1
+
+                detail = {
+                    "filename": json_path.name,
+                    "image": data.get("image_filename", "unknown"),
+                    "success": data.get("success", False),
+                    "error": data.get("error_message", None),
+                    "has_valuation": "valuation" in data and data["valuation"] is not None
+                }
+
+                if data.get("success"):
+                    status["successful"] += 1
+                else:
+                    status["failed"] += 1
+
+                status["details"].append(detail)
+
+            except json.JSONDecodeError:
+                status["corrupted"] += 1
+                status["details"].append({
+                    "filename": json_path.name,
+                    "image": "unknown",
+                    "success": False,
+                    "error": "Corrupted JSON",
+                    "has_valuation": False
+                })
+            except Exception as e:
+                status["corrupted"] += 1
+                status["details"].append({
+                    "filename": json_path.name,
+                    "image": "unknown",
+                    "success": False,
+                    "error": str(e),
+                    "has_valuation": False
+                })
+
+        return status
+
+    def clean_intermediate_results(self, remove_failed: bool = False, remove_corrupted: bool = True) -> dict:
+        """Clean up intermediate results
+
+        Args:
+            remove_failed: Remove results where success=False
+            remove_corrupted: Remove corrupted JSON files
+
+        Returns:
+            Dictionary with cleanup statistics
+        """
+        output_dir = Path(self.config.output_directory) / "intermediate"
+
+        if not output_dir.exists():
+            return {"removed": 0, "failed": [], "corrupted": []}
+
+        removed_count = 0
+        failed_removed = []
+        corrupted_removed = []
+
+        for json_path in output_dir.glob("*.json"):
+            should_remove = False
+
+            try:
+                with open(json_path, 'r') as f:
+                    data = json.load(f)
+
+                # Check if this is a failed result we should remove
+                if remove_failed and not data.get("success", False):
+                    # Check for specific errors that might be retryable
+                    error_msg = data.get("error_message", "").strip()
+                    retryable_errors = [
+                        "could not convert string to float: ''",
+                        "timeout",
+                        "rate limit",
+                        "connection error"
+                    ]
+
+                    is_retryable = any(err in error_msg.lower() for err in retryable_errors) if error_msg else True
+
+                    if is_retryable:
+                        should_remove = True
+                        failed_removed.append(json_path.name)
+
+            except (json.JSONDecodeError, Exception):
+                if remove_corrupted:
+                    should_remove = True
+                    corrupted_removed.append(json_path.name)
+
+            if should_remove:
+                try:
+                    json_path.unlink()
+                    removed_count += 1
+                    logger.info(f"Removed intermediate result: {json_path.name}")
+                except Exception as e:
+                    logger.error(f"Failed to remove {json_path.name}: {e}")
+
+        return {
+            "removed": removed_count,
+            "failed": failed_removed,
+            "corrupted": corrupted_removed
+        }
+
+    def validate_intermediate_results(self) -> dict:
+        """Validate all intermediate results and check for issues"""
+        output_dir = Path(self.config.output_directory) / "intermediate"
+
+        if not output_dir.exists():
+            return {"valid": 0, "invalid": 0, "issues": []}
+
+        valid_count = 0
+        invalid_count = 0
+        issues = []
+
+        for json_path in output_dir.glob("*.json"):
+            try:
+                with open(json_path, 'r') as f:
+                    data = json.load(f)
+
+                # Check required fields
+                required_fields = ["image_filename", "success", "processing_time"]
+                missing_fields = [field for field in required_fields if field not in data]
+
+                if missing_fields:
+                    invalid_count += 1
+                    issues.append({
+                        "file": json_path.name,
+                        "issue": f"Missing fields: {', '.join(missing_fields)}"
+                    })
+                elif data.get("success") and "valuation" in data:
+                    # Try to validate the valuation structure
+                    try:
+                        if data["valuation"]:
+                            ComicValuation(**data["valuation"])
+                        valid_count += 1
+                    except Exception as e:
+                        invalid_count += 1
+                        issues.append({
+                            "file": json_path.name,
+                            "issue": f"Invalid valuation structure: {str(e)}"
+                        })
+                elif data.get("success") and "valuation" not in data:
+                    invalid_count += 1
+                    issues.append({
+                        "file": json_path.name,
+                        "issue": "Success=True but no valuation present"
+                    })
+                elif not data.get("success") and not data.get("error_message"):
+                    invalid_count += 1
+                    issues.append({
+                        "file": json_path.name,
+                        "issue": "Success=False but no error message"
+                    })
+                else:
+                    valid_count += 1
+
+            except json.JSONDecodeError as e:
+                invalid_count += 1
+                issues.append({
+                    "file": json_path.name,
+                    "issue": f"Corrupted JSON: {str(e)}"
+                })
+            except Exception as e:
+                invalid_count += 1
+                issues.append({
+                    "file": json_path.name,
+                    "issue": f"Unexpected error: {str(e)}"
+                })
+
+        return {
+            "valid": valid_count,
+            "invalid": invalid_count,
+            "issues": issues
+        }
 
 
 # Convenience function for simple usage

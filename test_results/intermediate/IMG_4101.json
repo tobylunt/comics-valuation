@@ -1,0 +1,58 @@
+{
+  "image_filename": "IMG_4101.jpeg",
+  "success": true,
+  "processing_time": 326.32202315330505,
+  "error_message": null,
+  "valuation": {
+    "series": "Spider-Boy",
+    "title": "Spider-Boy",
+    "issue_number": "#1",
+    "publisher": "Amalgam Comics",
+    "publication_date": "April 1996",
+    "estimated_grade": "8.5",
+    "condition_notes": [
+      "Slight blunting/wear on the top right corner",
+      "Minor surface wear consistent with age and handling",
+      "No major creases, tears, or spine breaks are visible"
+    ],
+    "key_issue": true,
+    "key_issue_notes": "First appearance of Spider-Boy (Amalgam character, a fusion of Spider-Man and Superboy). This issue is part of the Amalgam Comics crossover event between Marvel and DC.",
+    "rarity_notes": "Part of a limited Amalgam Comics crossover event, making it a notable collectible for fans of both Marvel and DC.",
+    "valuation": {
+      "low_estimate": 11.0,
+      "best_estimate": 15.0,
+      "high_estimate": 20.0,
+      "confidence": 0.6
+    },
+    "image_filename": "IMG_4101.jpeg",
+    "analysis_date": "2025-10-20T14:15:29.894428",
+    "llm_provider": "gemini-gemini-2.5-flash",
+    "identification_confidence": 0.98,
+    "analysis_notes": "The comic is clearly identified as Spider-Boy #1 from Amalgam Comics, published in April 1996, as indicated by the 'APR 96' on the cover. Its condition is estimated to be Very Fine+ to Near Mint-, with only minor corner blunting and surface wear. This is a key issue due to being the first appearance of the Amalgam character Spider-Boy and its significance within the Amalgam Comics event. | Market data: Searches: Spider-Boy #1 Amalgam Comics April 1996 8.5 GPA sold price, Spider-Boy #1 Amalgam Comics April 1996 8.5 GoCollect sold price, Spider-Boy #1 Amalgam Comics April 1996 8.5 Heritage Auctions sold price, Spider-Boy #1 Amalgam Comics April 1996 8.5 eBay sold listings, Spider-Boy #1 Amalgam Comics April 1996 8.5 MyComicShop sold price, Spider-Boy #1 Amalgam Comics April 1996 8.5 ComicLink sold price | Sources: pricecharting.com, 13thdimension.com, gocollect.com",
+    "grounding_metadata": {
+      "search_queries": [
+        "Spider-Boy #1 Amalgam Comics April 1996 8.5 GPA sold price",
+        "Spider-Boy #1 Amalgam Comics April 1996 8.5 GoCollect sold price",
+        "Spider-Boy #1 Amalgam Comics April 1996 8.5 Heritage Auctions sold price",
+        "Spider-Boy #1 Amalgam Comics April 1996 8.5 eBay sold listings",
+        "Spider-Boy #1 Amalgam Comics April 1996 8.5 MyComicShop sold price",
+        "Spider-Boy #1 Amalgam Comics April 1996 8.5 ComicLink sold price"
+      ],
+      "sources": [
+        {
+          "title": "pricecharting.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEuDhr91t99aVhrZYyYopcysWtvdTlV_8JrKw5e0PWwy25O3mSbzwtm9_DGM_yRrDdIdtU8SL9q08_lXzCY6J_sma6e4nspMXPQcxtF9AXlJkAcAsuxO8sntxl2iVAcOFEPdvrJ8V7LIgImIdgpYhrdd3-YRodfwzsjTrg6HeK_gM00YxOLiA=="
+        },
+        {
+          "title": "13thdimension.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHu3Z50kA53OtLwlIdSHt4VR0LFy7GE6NOAQlWN1k5XWieYXjFj3PVt9JG2ZbaL_Czn3VvD4p-IGQnz9-orhYt_ZCpVV_cihgaEj1KW9CZkPg1uEukqXcPVhBsBnAWvYyM93bb-PYfoRMfTg38RveCVfRL5j_27J4Fafgv_fg1vChpkGYDbOeaF0AFkNnvygwOIbSA="
+        },
+        {
+          "title": "gocollect.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVIWHyGa9nXp_DBLks4HbdNGG6-rd9AbOwwUI2ottwPBMPKlq5b3OtWF5IUT_XGkmG03euDAZ4xz_GMOhojBIpYaOrCZFbvgyqVrQ899sDYkvmQ-uPSyUkeWeTJternVdqJdo="
+        }
+      ],
+      "grounding_used": true
+    }
+  }
+}

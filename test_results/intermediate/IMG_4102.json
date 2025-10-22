@@ -1,0 +1,68 @@
+{
+  "image_filename": "IMG_4102.jpeg",
+  "success": true,
+  "processing_time": 243.2438600063324,
+  "error_message": null,
+  "valuation": {
+    "series": "Wolverine",
+    "title": "Wolverine",
+    "issue_number": "100",
+    "publisher": "Marvel Comics",
+    "publication_date": "April 1996",
+    "estimated_grade": "8.0",
+    "condition_notes": [
+      "Minor corner wear on the bottom right",
+      "Slight spine stress visible along the left edge",
+      "The die-cut cover design is inherently prone to edge wear, though not severely damaged in the visible areas."
+    ],
+    "key_issue": true,
+    "key_issue_notes": "Milestone 100th issue. Features the return of Wolverine's adamantium and the introduction of 'Bone Claw' Wolverine. This is the die-cut cover variant.",
+    "rarity_notes": "This is the die-cut cover variant, which is generally less common than the standard cover for this issue, but not considered extremely rare.",
+    "valuation": {
+      "low_estimate": 48.0,
+      "best_estimate": 54.0,
+      "high_estimate": 60.0,
+      "confidence": 0.6
+    },
+    "image_filename": "IMG_4102.jpeg",
+    "analysis_date": "2025-10-20T14:14:41.824780",
+    "llm_provider": "gemini-gemini-2.5-flash",
+    "identification_confidence": 0.95,
+    "analysis_notes": "The comic is clearly identified as Wolverine #100, indicated by the prominent title and '...THE 100TH ISSUE!' text. The publisher is Marvel Comics, visible in the top left corner. The publication month 'APRIL' is also visible in the Marvel Comics box. Based on the issue number and the aesthetic, the year is confirmed as 1996. The cover is a special die-cut variant, celebrating the anniversary event. The condition appears to be Very Fine (8.0) with some minor handling wear, primarily corner dings and slight spine stress. | Market data: Searches: Wolverine #100 April 1996 8.0 sold price GPA, Wolverine #100 April 1996 8.0 sold price GoCollect, Wolverine #100 April 1996 8.0 sold price Heritage Auctions, Wolverine #100 April 1996 8.0 eBay sold listings, Wolverine #100 April 1996 8.0 sold price MyComicShop, Wolverine #100 April 1996 8.0 sold price ComicLink, Wolverine #100 April 1996 8.0 sold price GPA, Wolverine #100 April 1996 8.0 sold price GoCollect, Wolverine #100 April 1996 8.0 sold price Heritage Auctions, Wolverine #100 April 1996 8.0 eBay sold listings, Wolverine #100 April 1996 8.0 sold price MyComicShop, Wolverine #100 April 1996 8.0 sold price ComicLink | Sources: pricecharting.com, mycomicshop.com, gocollect.com, gocollect.com",
+    "grounding_metadata": {
+      "search_queries": [
+        "Wolverine #100 April 1996 8.0 sold price GPA",
+        "Wolverine #100 April 1996 8.0 sold price GoCollect",
+        "Wolverine #100 April 1996 8.0 sold price Heritage Auctions",
+        "Wolverine #100 April 1996 8.0 eBay sold listings",
+        "Wolverine #100 April 1996 8.0 sold price MyComicShop",
+        "Wolverine #100 April 1996 8.0 sold price ComicLink",
+        "Wolverine #100 April 1996 8.0 sold price GPA",
+        "Wolverine #100 April 1996 8.0 sold price GoCollect",
+        "Wolverine #100 April 1996 8.0 sold price Heritage Auctions",
+        "Wolverine #100 April 1996 8.0 eBay sold listings",
+        "Wolverine #100 April 1996 8.0 sold price MyComicShop",
+        "Wolverine #100 April 1996 8.0 sold price ComicLink"
+      ],
+      "sources": [
+        {
+          "title": "pricecharting.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXbNcQ0Tgy6EfzWpZvTsnuIT6-NLfaKff42_0e1gdZg19y1ADYlqYmzbOaVzF5b5EZ4tZ2dy5NvzPL4YUJjKxR936vDQTY9X_yqLLNoQRTkcOFq-k77c17lGA6W9kJcUuOsIQNKlaJshjhSZWOubwfm1DK4zYZb9poX6YdHyuvQKJ7U7eDdA=="
+        },
+        {
+          "title": "mycomicshop.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmc-XeBJE9udRQ3z0y4CPUXkq30LyQRn821980q4aME473Z62-C8Yh7CWgtoKK3rdEEpgP4BFrVAcZO39KlRuDoWrGkNwmm8dGAuoyGCh4hJ7ybf_9oGbanUxqVOyB_zxoY8PfavrZnuLgr0t6"
+        },
+        {
+          "title": "gocollect.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeECu7q3BiQ13_uESumzfWYCoHPZ_HNquwf35rNG9jzvJ-lvh2t278Js1KLWHtj92YJggUEgXWEkyn6nHPyJWFfOM6YPhpiJAc0dXXrArlOZF2ixHR7igN8z5VlRKZTdGz3_uLmL5lkd6_V_E0KsK-Mfkz"
+        },
+        {
+          "title": "gocollect.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEl3Sk7OcS9GMFwCZMx7w91AGtgZVmMFeq0GK8_kJXuRgjhJlJkpHaZ5kd8f5kNCAiWyd5inK56E_XbQV5S4ASe4xYSbwRQUoPv6r-A3RchAHFxL8KAUBl8UZtxD4f1S5HTnuhw"
+        }
+      ],
+      "grounding_used": true
+    }
+  }
+}

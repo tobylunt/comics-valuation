@@ -1,0 +1,685 @@
+{
+  "metadata": {
+    "total_processed": 10,
+    "successful": 10,
+    "failed": 0,
+    "batch_start_time": "2025-10-20T14:04:36.405490",
+    "batch_end_time": "2025-10-20T14:14:03.908373",
+    "total_processing_time": 567.502883
+  },
+  "results": [
+    {
+      "image_filename": "IMG_4089.jpeg",
+      "success": true,
+      "processing_time": 57.16039323806763,
+      "error_message": null,
+      "valuation": {
+        "series": "The Amazing Spider-Man",
+        "title": "Lifetheft: The Final Chapter",
+        "issue_number": "388",
+        "publisher": "Marvel Comics",
+        "publication_date": "April 1994",
+        "estimated_grade": "7.5",
+        "condition_notes": [
+          "Crease/blunt on the top right corner",
+          "Minor spine stress lines visible along the left edge",
+          "Scuffing and minor wear on the metallic foil elements, particularly along edges and corners",
+          "Minor surface scratches/indentations visible on the cover"
+        ],
+        "key_issue": false,
+        "key_issue_notes": "While a double-sized issue concluding a significant storyline ('Lifetheft'), it is not generally considered a major key issue for first appearances, significant character deaths, or iconic covers that drive high market value.",
+        "rarity_notes": "Standard print run for a major Marvel title in the mid-1990s; not considered rare.",
+        "valuation": {
+          "low_estimate": 11.76,
+          "best_estimate": 13.5,
+          "high_estimate": 18.0,
+          "confidence": 0.6
+        },
+        "image_filename": "IMG_4089.jpeg",
+        "analysis_date": "2025-10-20T14:05:33.567542",
+        "llm_provider": "gemini-gemini-2.5-flash",
+        "identification_confidence": 0.95,
+        "analysis_notes": "The comic is identified as The Amazing Spider-Man #388, published by Marvel Comics in April 1994. The cover clearly states 'SPECIAL DOUBLE-SIZED ISSUE!' and 'LIFETHEFT THE FINAL CHAPTER'. The publication month 'APR' is visible in the price box, and the artist signature 'BAGLEY + R.C. '93' suggests the art was completed in 1993, making April 1994 the likely publication date. The condition is estimated at 7.5 due to visible corner wear, spine stress, and surface imperfections on the foil. It is not considered a key issue in terms of market significance. | Market data: Searches: GPA sold prices Amazing Spider-Man #388 April 1994 grade 7.5, GoCollect sold prices Amazing Spider-Man #388 April 1994 grade 7.5, Heritage Auctions sold prices Amazing Spider-Man #388 April 1994 grade 7.5, eBay sold listings Amazing Spider-Man #388 April 1994 grade 7.5, MyComicShop sold prices Amazing Spider-Man #388 April 1994 grade 7.5, ComicLink sold prices Amazing Spider-Man #388 April 1994 grade 7.5 | Sources: pricecharting.com, gocollect.com, ha.com",
+        "grounding_metadata": {
+          "search_queries": [
+            "GPA sold prices Amazing Spider-Man #388 April 1994 grade 7.5",
+            "GoCollect sold prices Amazing Spider-Man #388 April 1994 grade 7.5",
+            "Heritage Auctions sold prices Amazing Spider-Man #388 April 1994 grade 7.5",
+            "eBay sold listings Amazing Spider-Man #388 April 1994 grade 7.5",
+            "MyComicShop sold prices Amazing Spider-Man #388 April 1994 grade 7.5",
+            "ComicLink sold prices Amazing Spider-Man #388 April 1994 grade 7.5"
+          ],
+          "sources": [
+            {
+              "title": "pricecharting.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBf2sqFdxZJf8doxkF0a5Nc2ox4E27jlA8U02UNVnmRWw-WFgpU7qhlY9bHpMlQIXULs5_sl9IG5GKZ1PHvGugQo_3gKtJuotQO5dQW7WcaZ5bFI9xw5S2lzBUcfeUlUdC_GoN7F8oj5OHPdjwVdZzUDgNs6PZwmNfaskuaSq5o201zdqC25eSca6Dm2b-ai1EOJ4bfEdjojC-UXG9nvR7vRgOH0f-0Jj5991nrJ8="
+            },
+            {
+              "title": "gocollect.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDxDS9VWKBUc7RrsRzXaorUVqX-Xqu6w-IYGLpbQSd09NjC2LCr6MERuA5gDyYu35bbP1nvNifDo2md0yMNiAa-ZdY-HdZDANyICunk94EAutDLkJ8svExLV-i2suKPrk_m1nBmdz8B8FYTEaUHxrVvwOk3RQfNpTd9ARA2ssdPIs="
+            },
+            {
+              "title": "ha.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzuzbMi7ZBNLtD6swr8FjBfVn6V7bRSXwWCtHnXITc5Ycxt45dHJs14J7_0zBqEY_muF4hu7HE6Zr9m7ePCX9ILHPK_qcMDwCRxtTZkKOzNNzP9XDrvq_ibAMGHWi9cjr_zW6FRR1zmtI3V257_3j6AvoK08QEY5GF-YDloOrV-8Ki_HE="
+            }
+          ],
+          "grounding_used": true
+        }
+      }
+    },
+    {
+      "image_filename": "IMG_4094.jpeg",
+      "success": true,
+      "processing_time": 47.24622893333435,
+      "error_message": null,
+      "valuation": {
+        "series": "Iron Man",
+        "title": "Iron Man",
+        "issue_number": "305",
+        "publisher": "Marvel Comics",
+        "publication_date": "June 1994",
+        "estimated_grade": "6.5",
+        "condition_notes": [
+          "Spine stress with color breaks",
+          "Blunted corners",
+          "Minor edge wear"
+        ],
+        "key_issue": false,
+        "key_issue_notes": "Features a prominent fight between Iron Man and Hulk on the cover, but not considered a major key issue for first appearances or significant events. This issue is part of the ongoing first volume of Iron Man.",
+        "rarity_notes": "Common issue for the era, not considered rare.",
+        "valuation": {
+          "low_estimate": 16.05,
+          "best_estimate": 17.5,
+          "high_estimate": 19.0,
+          "confidence": 0.4
+        },
+        "image_filename": "IMG_4094.jpeg",
+        "analysis_date": "2025-10-20T14:06:20.814488",
+        "llm_provider": "gemini-gemini-2.5-flash",
+        "identification_confidence": 0.95,
+        "analysis_notes": "The comic is identified as Iron Man #305 from June 1994. The cover depicts Iron Man fighting the Hulk. Condition shows moderate wear, primarily spine stress with color breaks along the spine and blunted corners, consistent with a mid-grade copy. | Market data: Searches: Iron Man #305 June 1994 6.5 GPA sold price, Iron Man #305 June 1994 6.5 GoCollect sold price, Iron Man #305 June 1994 6.5 Heritage Auctions sold price, Iron Man #305 June 1994 6.5 eBay sold listings, Iron Man #305 June 1994 6.5 MyComicShop sold price, Iron Man #305 June 1994 6.5 ComicLink sold price, Iron Man #305 (1994) 6.5 sold, Iron Man #305 June 1994 CGC 6.0 sold price, Iron Man #305 June 1994 CGC 7.0 sold price, Iron Man #305 June 1994 Heritage Auctions sold 6.5, Iron Man #305 June 1994 eBay sold 6.5, Iron Man #305 June 1994 ComicLink sold 6.5, Iron Man #305 June 1994 GPA sales data | Sources: gocollect.com, pricecharting.com",
+        "grounding_metadata": {
+          "search_queries": [
+            "Iron Man #305 June 1994 6.5 GPA sold price",
+            "Iron Man #305 June 1994 6.5 GoCollect sold price",
+            "Iron Man #305 June 1994 6.5 Heritage Auctions sold price",
+            "Iron Man #305 June 1994 6.5 eBay sold listings",
+            "Iron Man #305 June 1994 6.5 MyComicShop sold price",
+            "Iron Man #305 June 1994 6.5 ComicLink sold price",
+            "Iron Man #305 (1994) 6.5 sold",
+            "Iron Man #305 June 1994 CGC 6.0 sold price",
+            "Iron Man #305 June 1994 CGC 7.0 sold price",
+            "Iron Man #305 June 1994 Heritage Auctions sold 6.5",
+            "Iron Man #305 June 1994 eBay sold 6.5",
+            "Iron Man #305 June 1994 ComicLink sold 6.5",
+            "Iron Man #305 June 1994 GPA sales data"
+          ],
+          "sources": [
+            {
+              "title": "gocollect.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo8-qw1opSEQk6uj0nkLZA6mmv4b_DV-J5yWyK0LdvdWbGaqE8cvlVQ7B6n4ly6wwCcQIbkXQqdBEeVEwXEwWMDx0w5VOzikuH15Qb3QBDM5WeuSwlP2hmVDN9QMqzSMbvlTM="
+            },
+            {
+              "title": "pricecharting.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQlLZzjkQ2v_X4wSWLMP6YF-dmeymWDmav4dzWTbuAyox8WR0wZMsOx3iI_V4fiYIFTqBv20OwlwUz3Gu6rdhp6-OVFoDG7BZFC8mEymHUtbx1XQvRGnGdoCKZP8jzBuepm-GZbUAPFZ9ipbhSIRII4JP-xXJiF9XG2V3jSX7GNarIsVg="
+            }
+          ],
+          "grounding_used": true
+        }
+      }
+    },
+    {
+      "image_filename": "IMG_4095.jpeg",
+      "success": true,
+      "processing_time": 425.0229570865631,
+      "error_message": null,
+      "valuation": {
+        "series": "DANGER GIRL",
+        "title": "DANGER GIRL",
+        "issue_number": "4",
+        "publisher": "Image Comics",
+        "publication_date": "August 1998",
+        "estimated_grade": "7.5",
+        "condition_notes": [
+          "Minor blunting/wear on top left corner",
+          "Minor blunting/wear on bottom left corner",
+          "Very light spine stress visible upon close inspection"
+        ],
+        "key_issue": false,
+        "key_issue_notes": "This is a regular issue in the series and not generally considered a major key issue (e.g., first appearance, major death, or significant event).",
+        "rarity_notes": "Danger Girl was a popular series from Image Comics; copies of this issue are generally available and not considered rare.",
+        "valuation": {
+          "low_estimate": 10.0,
+          "best_estimate": 15.0,
+          "high_estimate": 25.0,
+          "confidence": 0.3
+        },
+        "image_filename": "IMG_4095.jpeg",
+        "analysis_date": "2025-10-20T14:13:25.838173",
+        "llm_provider": "gemini-gemini-2.5-flash",
+        "identification_confidence": 0.95,
+        "analysis_notes": "The series title 'DANGER GIRL', issue number '4', publisher 'Image', and publication month 'AUG' are clearly visible on the cover. The year 1998 is inferred based on the art style, publisher, and common knowledge of the series' publication history. The comic appears to be in solid Very Fine- condition with minor corner wear and very light spine stress. | Market data: Searches: Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices GPA, Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices GoCollect, Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices Heritage Auctions, Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices eBay sold listings, Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices MyComicShop, Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices ComicLink, Danger Girl #4 August 1998 Image Comics CGC 7.5 sold price eBay, Danger Girl #4 August 1998 Image Comics raw 7.5 sold price eBay, GoCollect Danger Girl #4 1998 7.5 sales, Heritage Auctions Danger Girl #4 1998 7.5 sold, ComicLink Danger Girl #4 1998 7.5 sold, GPA Comics Danger Girl #4 1998 7.5 sold, Danger Girl #4 Image Comics publication date, Danger Girl #4 August 1998 Image Comics sold price 7.5 eBay, Danger Girl #4 August 1998 Image Comics sold price 7.5 GoCollect, Danger Girl #4 August 1998 Image Comics sold price 7.5 Heritage Auctions, Danger Girl #4 August 1998 Image Comics sold price 7.5 ComicLink, Danger Girl #4 August 1998 Image Comics sold price 7.5 MyComicShop, Danger Girl #4 December 1998 Image Comics CGC 7.5 sold eBay, Danger Girl #4 December 1998 Image Comics raw 7.5 sold eBay, Danger Girl #4 December 1998 Image Comics VF- sold eBay, GoCollect Danger Girl #4 December 1998 7.5 sales, Heritage Auctions Danger Girl #4 December 1998 7.5 sold, ComicLink Danger Girl #4 December 1998 7.5 sold, MyComicShop Danger Girl #4 December 1998 7.5 sold | Sources: mycomicshop.com, wikipedia.org, gocollect.com",
+        "grounding_metadata": {
+          "search_queries": [
+            "Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices GPA",
+            "Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices GoCollect",
+            "Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices Heritage Auctions",
+            "Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices eBay sold listings",
+            "Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices MyComicShop",
+            "Danger Girl #4 August 1998 Image Comics grade 7.5 sold prices ComicLink",
+            "Danger Girl #4 August 1998 Image Comics CGC 7.5 sold price eBay",
+            "Danger Girl #4 August 1998 Image Comics raw 7.5 sold price eBay",
+            "GoCollect Danger Girl #4 1998 7.5 sales",
+            "Heritage Auctions Danger Girl #4 1998 7.5 sold",
+            "ComicLink Danger Girl #4 1998 7.5 sold",
+            "GPA Comics Danger Girl #4 1998 7.5 sold",
+            "Danger Girl #4 Image Comics publication date",
+            "Danger Girl #4 August 1998 Image Comics sold price 7.5 eBay",
+            "Danger Girl #4 August 1998 Image Comics sold price 7.5 GoCollect",
+            "Danger Girl #4 August 1998 Image Comics sold price 7.5 Heritage Auctions",
+            "Danger Girl #4 August 1998 Image Comics sold price 7.5 ComicLink",
+            "Danger Girl #4 August 1998 Image Comics sold price 7.5 MyComicShop",
+            "Danger Girl #4 December 1998 Image Comics CGC 7.5 sold eBay",
+            "Danger Girl #4 December 1998 Image Comics raw 7.5 sold eBay",
+            "Danger Girl #4 December 1998 Image Comics VF- sold eBay",
+            "GoCollect Danger Girl #4 December 1998 7.5 sales",
+            "Heritage Auctions Danger Girl #4 December 1998 7.5 sold",
+            "ComicLink Danger Girl #4 December 1998 7.5 sold",
+            "MyComicShop Danger Girl #4 December 1998 7.5 sold"
+          ],
+          "sources": [
+            {
+              "title": "mycomicshop.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESsW9jQnl-Bcjvv8Wj3CQc4zHOsF09cgeQ-Pzw77kgJbOlfGZJOSSuAdh95xdqAVdMul9lrQEbozVDfKCla0UtgaZgq0Cmiae18RvqFfivglgn1_C5_zKwwbGQcmNJLymIhmYAqwbtJQ=="
+            },
+            {
+              "title": "wikipedia.org",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCrObbmpWxJSb2z0nyKDQfWsnlT25CZSIELBApLtWwj2Ue4Hz9ydfNsXXop2S0OtQ4otqVAPZkm_QhDxWbB30YyNQ032ULTlyK0qJ3s_5moHKr7Hdbf8A1qOoBFxYFnX7YzCl9YbA="
+            },
+            {
+              "title": "gocollect.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE67jwaNGLtkss7VfugxLeMDOFnaaRrfubnryIZ7udjfs69TVdjnnV6ZWHKH737d5wYyJ_WsXHNNN7fEg4KZ6ZEG0hyDSpPYvNeOwaSETlZOZUZZXAD--QpsDOVyPoC7W8Iaa_3"
+            }
+          ],
+          "grounding_used": true
+        }
+      }
+    },
+    {
+      "image_filename": "IMG_4096.jpeg",
+      "success": true,
+      "processing_time": 33.2168231010437,
+      "error_message": null,
+      "valuation": {
+        "series": "IRON MAN",
+        "title": "IRON MAN",
+        "issue_number": "1",
+        "publisher": "MARVEL COMICS",
+        "publication_date": "November 1996",
+        "estimated_grade": "8.0",
+        "condition_notes": [
+          "Minor blunting/crease on the top left corner",
+          "Minor spine stress visible along the length of the spine",
+          "Slight blunting on the bottom right corner"
+        ],
+        "key_issue": true,
+        "key_issue_notes": "This is the first issue of Iron Man (Vol. 2), part of Marvel's 'Heroes Reborn' initiative, where several major characters were rebooted and their origins retold by Image Comics creators. It marks a significant relaunch for the character.",
+        "rarity_notes": "While a key issue for its historical significance within the Heroes Reborn era, this issue was widely distributed and is not considered rare.",
+        "valuation": {
+          "low_estimate": 188.0,
+          "best_estimate": 219.0,
+          "high_estimate": 250.0,
+          "confidence": 0.7
+        },
+        "image_filename": "IMG_4096.jpeg",
+        "analysis_date": "2025-10-20T14:07:33.971135",
+        "llm_provider": "gemini-gemini-2.5-flash",
+        "identification_confidence": 1.0,
+        "analysis_notes": "The series 'IRON MAN' and issue number '1' are clearly visible in the top left corner. The publisher 'MARVEL COMICS' logo is also present. The publication date 'NOV '96' is explicitly stated on the cover, indicating November 1996. The 'Heroes Reborn' era is inferred from the publication date and the fact it's a new #1 for a major character during that specific period. Condition notes are based on visible corner wear and spine stress. | Market data: Searches: Iron Man #1 November 1996 8.0 GPA sold, Iron Man #1 Heroes Reborn 8.0 GoCollect sold, Iron Man #1 November 1996 8.0 Heritage Auctions sold, Iron Man #1 Heroes Reborn 8.0 eBay sold listings, Iron Man #1 November 1996 8.0 MyComicShop sold, Iron Man #1 Heroes Reborn 8.0 ComicLink sold, Iron Man #1 (1996) 8.0 sold prices | Sources: mycomicshop.com, gocollect.com, pricecharting.com, pricecharting.com",
+        "grounding_metadata": {
+          "search_queries": [
+            "Iron Man #1 November 1996 8.0 GPA sold",
+            "Iron Man #1 Heroes Reborn 8.0 GoCollect sold",
+            "Iron Man #1 November 1996 8.0 Heritage Auctions sold",
+            "Iron Man #1 Heroes Reborn 8.0 eBay sold listings",
+            "Iron Man #1 November 1996 8.0 MyComicShop sold",
+            "Iron Man #1 Heroes Reborn 8.0 ComicLink sold",
+            "Iron Man #1 (1996) 8.0 sold prices"
+          ],
+          "sources": [
+            {
+              "title": "mycomicshop.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5XwyAblAEJx3kf2Dc0IJlsiKuWgRXtKmJIST7U32J9CHHsBaFzbZi_L5hP4ppIOJJRuvYVfQ_aO14gC4dqHbjmoHlikahesgkxrl7YVGvs8of3th-IggrfhR49a7q5Fj26SaLQpRo"
+            },
+            {
+              "title": "gocollect.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdM6dIlOs9hbRKH_o0I8lA-cEuhuEn99vr3slbjTG2OZ4dhM9MfDiP_di6QzyMZsuhvRZefxNi-SHSqzbrwg65PzLe6W-_ds0BNO5luxhNqcOP76NCf_uwaGJ2ZcQmsmNrwQ=="
+            },
+            {
+              "title": "pricecharting.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcQJpWGGMCXyR0fUITngwGseBknHDj40NFjZT9XxGuQAhYob9geKNW7IjAOgkAHqWJebNFOlgNmcUJEP_MrI-2hg-ESQmQnMdMyWCKrmyJ59PN_9Y10Mtu8InNIFxP_AnW-4QDT_Xv4W8z7AoI8wM3Fa6xKFHSvrf0WRprlwetY-VY"
+            },
+            {
+              "title": "pricecharting.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvzK3tvmCV3BrhNrN6s7yMSk8C9ePcQ31Y0Qb0Z85wuR9aZLx2OdxljACZb8aoocNytZzvdVr_7zotmK47iChf2IGJNTbQzXurFbcRm4DwGwpqs7lgOyfmriBnHiKpE3-0ogFpjQPw0b_ShyOcg1dragt8w6BpDSsjBfPSJdwLxW6Xhp4PJG407Q=="
+            }
+          ],
+          "grounding_used": true
+        }
+      }
+    },
+    {
+      "image_filename": "IMG_4097.jpeg",
+      "success": true,
+      "processing_time": 45.70097804069519,
+      "error_message": null,
+      "valuation": {
+        "series": "GEN 13 BOOTLEG",
+        "title": "Part 2 of 3",
+        "issue_number": "9",
+        "publisher": "Image Comics",
+        "publication_date": "July 1998",
+        "estimated_grade": "8.0",
+        "condition_notes": [
+          "Minor corner ding/crease on the bottom right",
+          "Minor spine stress visible along the spine"
+        ],
+        "key_issue": false,
+        "key_issue_notes": "Not identified as a major key issue based on cover content. The 'Bootleg' series issues are generally not major keys unless they contain significant first appearances or events, which is not indicated by the cover.",
+        "rarity_notes": "The 'Bootleg' series was a spin-off from the main Gen 13 title. While not typically considered rare, specific print runs or variants can influence rarity. No immediate indicators of extreme rarity are present on the cover.",
+        "valuation": {
+          "low_estimate": 1.0,
+          "best_estimate": 5.0,
+          "high_estimate": 10.0,
+          "confidence": 0.0
+        },
+        "image_filename": "IMG_4097.jpeg",
+        "analysis_date": "2025-10-20T14:08:19.673225",
+        "llm_provider": "gemini-gemini-2.5-flash",
+        "identification_confidence": 0.95,
+        "analysis_notes": "The comic is identified as 'GEN 13 BOOTLEG Part 2 of 3', issue #9, published by Image Comics. The publication month 'JULY' is visible in the price box, and the year '1998' is inferred based on common publication data for this series and issue. The cover features three characters (two female, one male) surrounded by various firearms and bullet casings, consistent with the 'ALL EXPLOITATION ISSUE!' tagline. The overall condition is good, with minor wear consistent with an estimated grade of 8.0. | Market data: Searches: GEN 13 BOOTLEG #9 July 1998 8.0 GoCollect sold price, GEN 13 BOOTLEG #9 July 1998 8.0 GPA sold price, GEN 13 BOOTLEG #9 July 1998 8.0 Heritage Auctions sold price, GEN 13 BOOTLEG #9 July 1998 8.0 eBay sold listings, GEN 13 BOOTLEG #9 July 1998 8.0 MyComicShop sold price, GEN 13 BOOTLEG #9 July 1998 8.0 ComicLink sold price, GoCollect Gen 13 Bootleg #9 July 1998 8.0 sold, eBay sold listings Gen 13 Bootleg #9 July 1998 8.0 CGC, eBay sold listings Gen 13 Bootleg #9 July 1998 8.0 raw, Heritage Auctions Gen 13 Bootleg #9 July 1998 8.0 sold, MyComicShop Gen 13 Bootleg #9 July 1998 8.0 sold, ComicLink Gen 13 Bootleg #9 July 1998 8.0 sold | Sources: gocollect.com, ebay.com, ebay.com, controlzeta.ws, ebay.com",
+        "grounding_metadata": {
+          "search_queries": [
+            "GEN 13 BOOTLEG #9 July 1998 8.0 GoCollect sold price",
+            "GEN 13 BOOTLEG #9 July 1998 8.0 GPA sold price",
+            "GEN 13 BOOTLEG #9 July 1998 8.0 Heritage Auctions sold price",
+            "GEN 13 BOOTLEG #9 July 1998 8.0 eBay sold listings",
+            "GEN 13 BOOTLEG #9 July 1998 8.0 MyComicShop sold price",
+            "GEN 13 BOOTLEG #9 July 1998 8.0 ComicLink sold price",
+            "GoCollect Gen 13 Bootleg #9 July 1998 8.0 sold",
+            "eBay sold listings Gen 13 Bootleg #9 July 1998 8.0 CGC",
+            "eBay sold listings Gen 13 Bootleg #9 July 1998 8.0 raw",
+            "Heritage Auctions Gen 13 Bootleg #9 July 1998 8.0 sold",
+            "MyComicShop Gen 13 Bootleg #9 July 1998 8.0 sold",
+            "ComicLink Gen 13 Bootleg #9 July 1998 8.0 sold"
+          ],
+          "sources": [
+            {
+              "title": "gocollect.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJadZQ0Mf87GZcj0mJy7NiTzeIDCkaKLMicdFWojjUxIX6eOb1aRcaTcUn7PCdNcY0x9hofcBr1YxzmNr6jsRxPh7-PJ1GDtwh9ePCMw1hKIo4JVnoiB1IvalLkQ3MKd-GtRNoovc4"
+            },
+            {
+              "title": "ebay.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJtmqBK5Rcr7SF71fIhPG-3TjXt6XLRPTjcVujG7teWfthn0Ec_8nJTb4iknf67YDr8b5M7KSTnC8z_RMj6u3Y8cXCTPBdFTluL_5i_O8Zru8Hj3TqnXWKGeUV_rz_lol4WfS5iI72V5EMMNWbCGE="
+            },
+            {
+              "title": "ebay.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHp4fbqFw40qsFagicQXH_eDXk4ZX6_RCDmgq4SZcxYOGolwY14VOAaYuBW1rlr3CMfvp9ks-GljoOJHzAv01JdBbvNWM1VkINcFjsUvqUNvYbGBZmQrDb2yiWoa4F1VQQ="
+            },
+            {
+              "title": "controlzeta.ws",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFHzZWJQbWWoglKvkiz_mcs4cq-WJVVszp8sYAHZk1nqgDl_sZk0WBngftRhOi_F2NyuRQIAOpp3Jqc-ZZyCE1bLzYS_97c4JHpbZZCxgOUzlKH0CbhWirXG-FgnSIOpX70aY2yZoLFQZpS-dDQw-NtB9kCQDiLc35mGezT9Lem8l5cC33unlSEH9Fa7wx0A=="
+            },
+            {
+              "title": "ebay.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8G_VUA-3hZe11WNQlbBc7-ScZ5Ha0Htf05C9SjPlEMwiaR6XRLEKWqeUP368GP8g6qibG-1auySRopcHllanC6M80dUM4adUB3EvSrK4YpIzeVlT4yiFRhEogu6XM4lk="
+            }
+          ],
+          "grounding_used": true
+        }
+      }
+    },
+    {
+      "image_filename": "IMG_4098.jpeg",
+      "success": true,
+      "processing_time": 40.73158097267151,
+      "error_message": null,
+      "valuation": {
+        "series": "Detective Comics",
+        "title": "Batman",
+        "issue_number": "667",
+        "publisher": "DC Comics",
+        "publication_date": "October 1993",
+        "estimated_grade": "6.5",
+        "condition_notes": [
+          "Spine stress visible along the length of the spine",
+          "Minor corner wear and blunting, particularly at the top and bottom right",
+          "Some surface wear and minor creasing visible on the cover"
+        ],
+        "key_issue": true,
+        "key_issue_notes": "Part of the significant 'Knightquest: The Crusade' storyline, featuring Azrael as Batman.",
+        "rarity_notes": "Common mainstream comic from the 1990s, not considered rare.",
+        "valuation": {
+          "low_estimate": 10.0,
+          "best_estimate": 15.0,
+          "high_estimate": 20.0,
+          "confidence": 0.4
+        },
+        "image_filename": "IMG_4098.jpeg",
+        "analysis_date": "2025-10-20T14:09:00.406245",
+        "llm_provider": "gemini-gemini-2.5-flash",
+        "identification_confidence": 0.95,
+        "analysis_notes": "The comic is identified as Detective Comics #667, published by DC Comics in October 1993. It is part of the 'Knightquest: The Crusade' storyline, which is clearly indicated on the cover. The cover features Azrael in the Batman costume. The creative team of Dixon, Nolan, and Hanna is listed. The publication date 'OCT 93' is clearly visible in the price box. The condition shows moderate wear consistent with a mid-grade comic. | Market data: Searches: Detective Comics #667 October 1993 6.5 GPA sold price, Detective Comics #667 October 1993 6.5 GoCollect sold price, Detective Comics #667 October 1993 6.5 Heritage Auctions sold price, Detective Comics #667 October 1993 6.5 eBay sold listings, Detective Comics #667 October 1993 6.5 MyComicShop sold price, Detective Comics #667 October 1993 6.5 ComicLink sold price, GoCollect Detective Comics #667 October 1993 6.5 sold prices, eBay sold listings Detective Comics #667 October 1993 CGC 6.5, Heritage Auctions Detective Comics #667 October 1993 6.5 sold, MyComicShop Detective Comics #667 October 1993 6.5 sold, ComicLink Detective Comics #667 October 1993 6.5 sold, eBay sold listings \"Detective Comics #667\" \"October 1993\" CGC 6.5, eBay sold listings \"Detective Comics #667\" \"October 1993\" raw 6.5, GoCollect Detective Comics #667 1993 sales data, MyComicShop sold prices Detective Comics #667 October 1993 6.5, ComicLink sold prices Detective Comics #667 October 1993 6.5 | Sources: gocollect.com, pricecharting.com",
+        "grounding_metadata": {
+          "search_queries": [
+            "Detective Comics #667 October 1993 6.5 GPA sold price",
+            "Detective Comics #667 October 1993 6.5 GoCollect sold price",
+            "Detective Comics #667 October 1993 6.5 Heritage Auctions sold price",
+            "Detective Comics #667 October 1993 6.5 eBay sold listings",
+            "Detective Comics #667 October 1993 6.5 MyComicShop sold price",
+            "Detective Comics #667 October 1993 6.5 ComicLink sold price",
+            "GoCollect Detective Comics #667 October 1993 6.5 sold prices",
+            "eBay sold listings Detective Comics #667 October 1993 CGC 6.5",
+            "Heritage Auctions Detective Comics #667 October 1993 6.5 sold",
+            "MyComicShop Detective Comics #667 October 1993 6.5 sold",
+            "ComicLink Detective Comics #667 October 1993 6.5 sold",
+            "eBay sold listings \"Detective Comics #667\" \"October 1993\" CGC 6.5",
+            "eBay sold listings \"Detective Comics #667\" \"October 1993\" raw 6.5",
+            "GoCollect Detective Comics #667 1993 sales data",
+            "MyComicShop sold prices Detective Comics #667 October 1993 6.5",
+            "ComicLink sold prices Detective Comics #667 October 1993 6.5"
+          ],
+          "sources": [
+            {
+              "title": "gocollect.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGRpqWyG0-tPIkEd14nG9GVIYwO-uTqqpzHhzr0vvQCI8wvcsJdJTBgC8Ejmq1_mQu-A_3Q-K_EUR9EMg4vnUvPx1wMt6-b9w66kdwxSAKH12WWoc2plMfIMmfHkm4RD-zIbjVKlbHqUj4tA=="
+            },
+            {
+              "title": "pricecharting.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOBHfuMKx92y4eBW0hsYJrVPnaaWbXbgKgCRCbP3gBHr3uZfXsM1hF0dnhYX9Vnl4q8OrYRQcIhXuLgPZR4qVmpEG47bLT1hl98XzUN-svOo-KchTEvE45GJhd0UfTjaxVQdqZfTPkjZsTxmv1Oe6kZWODNsEHyqJdHMTnKcuyiNjhW3TJs-1pm_mwplhbw5ozB310nWcu"
+            }
+          ],
+          "grounding_used": true
+        }
+      }
+    },
+    {
+      "image_filename": "IMG_4099.jpeg",
+      "success": true,
+      "processing_time": 303.4983289241791,
+      "error_message": null,
+      "valuation": {
+        "series": "Ride",
+        "title": "Ride",
+        "issue_number": "1",
+        "publisher": "Image Comics",
+        "publication_date": "October 1999",
+        "estimated_grade": "8.0",
+        "condition_notes": [
+          "Minor corner ding on bottom left",
+          "Light surface wear/scuffing visible on cover, including a circular mark on the lower half",
+          "Minimal spine stress"
+        ],
+        "key_issue": true,
+        "key_issue_notes": "First issue of the series, featuring the first appearance of the character Ride.",
+        "rarity_notes": "This is a first issue from a major independent publisher, but not considered exceptionally rare.",
+        "valuation": {
+          "low_estimate": 1.0,
+          "best_estimate": 5.0,
+          "high_estimate": 10.0,
+          "confidence": 0.0
+        },
+        "image_filename": "IMG_4099.jpeg",
+        "analysis_date": "2025-10-20T14:14:03.905420",
+        "llm_provider": "gemini-gemini-2.5-flash",
+        "identification_confidence": 0.95,
+        "analysis_notes": "The comic is clearly identified as 'Ride' issue #1 from Image Comics. The publication date of October 1999 was determined by cross-referencing the series and issue number with comic databases, as no date was explicitly visible on the cover. The condition is estimated at 8.0 (Very Fine) due to minor corner wear and visible surface scuffing, particularly a circular mark on the lower cover, but otherwise presents well with a relatively flat spine. | Market data: Searches: Ride #1 Image Comics October 1999 8.0 GPA sold prices, Ride #1 Image Comics October 1999 8.0 GoCollect sold prices, Ride #1 Image Comics October 1999 8.0 Heritage Auctions sold prices, Ride #1 Image Comics October 1999 8.0 eBay sold listings, Ride #1 Image Comics October 1999 8.0 MyComicShop sold prices, Ride #1 Image Comics October 1999 8.0 ComicLink sold prices, Image Comics The Ride #1 October 1999 8.0 sold price GPA, Image Comics The Ride #1 October 1999 8.0 sold price GoCollect, Image Comics The Ride #1 October 1999 8.0 Heritage Auctions sold, Image Comics The Ride #1 October 1999 8.0 eBay sold, Image Comics The Ride #1 October 1999 8.0 MyComicShop sold, Image Comics The Ride #1 October 1999 8.0 ComicLink sold, Image Comics The Ride #1 October 1999 sold prices | Sources: gocollect.com, ebay.com, ebay.com, ebay.com, mycomicshop.com",
+        "grounding_metadata": {
+          "search_queries": [
+            "Ride #1 Image Comics October 1999 8.0 GPA sold prices",
+            "Ride #1 Image Comics October 1999 8.0 GoCollect sold prices",
+            "Ride #1 Image Comics October 1999 8.0 Heritage Auctions sold prices",
+            "Ride #1 Image Comics October 1999 8.0 eBay sold listings",
+            "Ride #1 Image Comics October 1999 8.0 MyComicShop sold prices",
+            "Ride #1 Image Comics October 1999 8.0 ComicLink sold prices",
+            "Image Comics The Ride #1 October 1999 8.0 sold price GPA",
+            "Image Comics The Ride #1 October 1999 8.0 sold price GoCollect",
+            "Image Comics The Ride #1 October 1999 8.0 Heritage Auctions sold",
+            "Image Comics The Ride #1 October 1999 8.0 eBay sold",
+            "Image Comics The Ride #1 October 1999 8.0 MyComicShop sold",
+            "Image Comics The Ride #1 October 1999 8.0 ComicLink sold",
+            "Image Comics The Ride #1 October 1999 sold prices"
+          ],
+          "sources": [
+            {
+              "title": "gocollect.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcp1fefF_Ed1jP_zdGAOD3ytdXbiQcH80zVpATZJRI9BeAMiuHp6J3Lz1jSam1V6AfdI3SeyxfUiV44ZLF2LIxPYGNlbBHySYSpNhsWQ1Wj4M0PDAoFNzvrpCEkdqO4osY"
+            },
+            {
+              "title": "ebay.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM0Dzz8zHy_gZWBJZ71nNu61Drbb4ZYGLVZ-6H0CHYKMxeM17nmvk1YSJ_13bm1ZbW21qFeohVHerseaS1CLM-jwquxu2WAXCB4OxmR3uPCJZDjptn7VDU3RuVnFlYP9Y="
+            },
+            {
+              "title": "ebay.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHm8gb_6QqClY1TZjxM-tUSD4tDMEOGLvbGjufsNuuyff5oEiKqVN8haw6UuvHaBmqiDqpS1XTqT4zlfVT6t5uvnWehCRWeKBbkqULRY3Bmh6QfpqlrvxjgTBX6fieFvZs="
+            },
+            {
+              "title": "ebay.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlQZaVnd9HemZsMAkAZ06-yvoRahZVNg1gXxeIFkwTDX_JqBi_ieJfG9XlrkxUAS--ZZUOiVDFR3UhowE8_sHF8uFFJKwZ3Vfpx0MIluvbVar9cUzGDuguN3waGHDezMA="
+            },
+            {
+              "title": "mycomicshop.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGokJiIIO3sEUSAm9ibSQf4LaHWoSY7PHhBQvHfsfn4_Qk29V8uaAUog5WGQOofKLnVcHubwiW0_HFGWnPvtjfFVzVggBXneVr1z5LKyYa8f_O6XgpKHHYo_10kYEcRTzqY5j7_gbs7NQ=="
+            },
+            {
+              "title": "ha.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsvUUn4ELc__gliZwEauS3us_kW0hxOrCa5a6Ge0sEBe3Ya_PzNSURDGotzPzrbaxX2miKOrzGzHlFny0lsln-_ua6oQ5C7UIl4JDFAds_KXr8RNQSq8TnDE0rkirzql8AO4M3-reTqX4r3yBSzp9r6IvAHWEq2HMNXXNG5bkIbpuePymopH-ApRfKkssI-zWpIfrnJMmKB1MpTw1BQ3h_UANmlDKd9arMfMYDnZ0HytmbyNDufodYKrUQMkOW8uJH2deL-w=="
+            },
+            {
+              "title": "comichron.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoo1Ro6Zj8SZXyHihQWrk0njqcmXO0RysvJ8sCF9CvuhaJTFo3HM8ZK0BLhRO6anRK8oHQpPnOFFs1zoRv3H-IQH2QVdcsZGhngHGCrICnKg-Fa2jqAUH1BxY1VjU7p-057lUQn22Iq_mrVDl4t9YVndRAl4XaKbCf"
+            }
+          ],
+          "grounding_used": true
+        }
+      }
+    },
+    {
+      "image_filename": "IMG_4100.jpeg",
+      "success": true,
+      "processing_time": 50.44983983039856,
+      "error_message": null,
+      "valuation": {
+        "series": "WILDSTAR",
+        "title": "WILDSTAR",
+        "issue_number": "1",
+        "publisher": "Image Comics",
+        "publication_date": "March 1993",
+        "estimated_grade": "8.0",
+        "condition_notes": [
+          "Multiple minor spine stress lines with slight color breaks",
+          "Minor ding/crease with color break on the top right corner",
+          "Minor wear on the bottom right corner",
+          "Slight general wear along the edges",
+          "Minor surface scuffing/discoloration visible on the white areas"
+        ],
+        "key_issue": true,
+        "key_issue_notes": "First issue of the series; first appearance of Wildstar.",
+        "rarity_notes": "As an early Image Comics title, print runs were generally high, but first issues still hold collector value.",
+        "valuation": {
+          "low_estimate": 3.0,
+          "best_estimate": 6.0,
+          "high_estimate": 9.0,
+          "confidence": 0.5
+        },
+        "image_filename": "IMG_4100.jpeg",
+        "analysis_date": "2025-10-20T14:10:33.586036",
+        "llm_provider": "gemini-gemini-2.5-flash",
+        "identification_confidence": 0.98,
+        "analysis_notes": "The comic is clearly identified as Wildstar #1 from Image Comics. The publication month 'MAR' is visible in the price box, and external verification confirms the year as 1993. The condition shows several minor flaws consistent with a Very Fine grade. | Market data: Searches: WILDSTAR #1 March 1993 Image Comics 8.0 GPA sold prices, WILDSTAR #1 March 1993 Image Comics 8.0 GoCollect sold prices, WILDSTAR #1 March 1993 Image Comics 8.0 Heritage Auctions sold prices, WILDSTAR #1 March 1993 Image Comics 8.0 eBay sold listings, WILDSTAR #1 March 1993 Image Comics 8.0 MyComicShop sold prices, WILDSTAR #1 March 1993 Image Comics 8.0 ComicLink sold prices, WILDSTAR #1 March 1993 Image Comics 8.0 GPA sold prices, WILDSTAR #1 March 1993 Image Comics 8.0 GoCollect sold prices, WILDSTAR #1 March 1993 Image Comics 8.0 Heritage Auctions sold prices, WILDSTAR #1 March 1993 Image Comics 8.0 eBay sold listings, WILDSTAR #1 March 1993 Image Comics 8.0 MyComicShop sold prices, WILDSTAR #1 March 1993 Image Comics 8.0 ComicLink sold prices | Sources: gocollect.com, pricecharting.com",
+        "grounding_metadata": {
+          "search_queries": [
+            "WILDSTAR #1 March 1993 Image Comics 8.0 GPA sold prices",
+            "WILDSTAR #1 March 1993 Image Comics 8.0 GoCollect sold prices",
+            "WILDSTAR #1 March 1993 Image Comics 8.0 Heritage Auctions sold prices",
+            "WILDSTAR #1 March 1993 Image Comics 8.0 eBay sold listings",
+            "WILDSTAR #1 March 1993 Image Comics 8.0 MyComicShop sold prices",
+            "WILDSTAR #1 March 1993 Image Comics 8.0 ComicLink sold prices",
+            "WILDSTAR #1 March 1993 Image Comics 8.0 GPA sold prices",
+            "WILDSTAR #1 March 1993 Image Comics 8.0 GoCollect sold prices",
+            "WILDSTAR #1 March 1993 Image Comics 8.0 Heritage Auctions sold prices",
+            "WILDSTAR #1 March 1993 Image Comics 8.0 eBay sold listings",
+            "WILDSTAR #1 March 1993 Image Comics 8.0 MyComicShop sold prices",
+            "WILDSTAR #1 March 1993 Image Comics 8.0 ComicLink sold prices"
+          ],
+          "sources": [
+            {
+              "title": "gocollect.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGR-ITDdjszPvg7UO7KTImP-OIzKSxf0eqT3Bl7ZNNnAcbwE_7tYqr27-n3MxGZMdOw4Vq7NePxcRiN7Koufo00hiltvfde4KFkvdJ9U4xbwfG3r3QV7qIDE8vVTdag2w1W5ANFx7C6VRqa"
+            },
+            {
+              "title": "pricecharting.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHtaiTD42viiEkJZJX66wrmuGtyW0TF4pMh8-Q0T29ZVG6RRxn5R9QmUIgobmYALbq4TGW6gD62r3Q21KGiN8Gp-Lw-4Zbj2kW6xQlrpWFhv9RsGMBAVtT2Qp1Yr1pXV8S3tw0lbkLfzCDhOsdSw4YI4F74Eh0CbANjbhyoFDghya5ctPZTJZex4yXwlM1f_5Y04bh"
+            }
+          ],
+          "grounding_used": true
+        }
+      }
+    },
+    {
+      "image_filename": "IMG_4101.jpeg",
+      "success": true,
+      "processing_time": 46.0114049911499,
+      "error_message": null,
+      "valuation": {
+        "series": "Spider-Boy",
+        "title": "Spider-Boy",
+        "issue_number": "#1",
+        "publisher": "Amalgam Comics",
+        "publication_date": "April 1996",
+        "estimated_grade": "8.5",
+        "condition_notes": [
+          "Minor corner wear on top right",
+          "Very light spine stress (difficult to confirm without closer inspection of the spine)"
+        ],
+        "key_issue": true,
+        "key_issue_notes": "First appearance of Spider-Boy (Amalgam character, a fusion of Spider-Man and Superboy). Part of the Amalgam Comics crossover event.",
+        "rarity_notes": "Part of a limited crossover event between Marvel and DC Comics. While not extremely rare, it's a significant collectible from that specific era.",
+        "valuation": {
+          "low_estimate": 11.0,
+          "best_estimate": 14.0,
+          "high_estimate": 17.0,
+          "confidence": 0.7
+        },
+        "image_filename": "IMG_4101.jpeg",
+        "analysis_date": "2025-10-20T14:11:19.598179",
+        "llm_provider": "gemini-gemini-2.5-flash",
+        "identification_confidence": 0.95,
+        "analysis_notes": "The comic is clearly identified as Spider-Boy #1 from Amalgam Comics, published in April 1996. The 'AMALGAM' logo and 'APR 96' on the cover confirm the publication details and era. The condition appears to be Very Fine to Near Mint, with only minor visible wear. | Market data: Searches: Spider-Boy #1 Amalgam Comics April 1996 8.5 GPA sold price, Spider-Boy #1 Amalgam Comics April 1996 8.5 GoCollect sold price, Spider-Boy #1 Amalgam Comics April 1996 8.5 Heritage Auctions sold price, Spider-Boy #1 Amalgam Comics April 1996 8.5 eBay sold listings, Spider-Boy #1 Amalgam Comics April 1996 8.5 MyComicShop sold price, Spider-Boy #1 Amalgam Comics April 1996 8.5 ComicLink sold price, Spider-Boy #1 Amalgam Comics April 1996 CGC 8.5 sold price, Spider-Boy #1 Amalgam Comics April 1996 CBCS 8.5 sold price, GoCollect Spider-Boy #1 Amalgam Comics 1996 8.5 sold, Heritage Auctions Spider-Boy #1 Amalgam Comics 1996 8.5 sold, ComicLink Spider-Boy #1 Amalgam Comics 1996 8.5 sold | Sources: pricecharting.com, 13thdimension.com, gocollect.com, mycomicshop.com",
+        "grounding_metadata": {
+          "search_queries": [
+            "Spider-Boy #1 Amalgam Comics April 1996 8.5 GPA sold price",
+            "Spider-Boy #1 Amalgam Comics April 1996 8.5 GoCollect sold price",
+            "Spider-Boy #1 Amalgam Comics April 1996 8.5 Heritage Auctions sold price",
+            "Spider-Boy #1 Amalgam Comics April 1996 8.5 eBay sold listings",
+            "Spider-Boy #1 Amalgam Comics April 1996 8.5 MyComicShop sold price",
+            "Spider-Boy #1 Amalgam Comics April 1996 8.5 ComicLink sold price",
+            "Spider-Boy #1 Amalgam Comics April 1996 CGC 8.5 sold price",
+            "Spider-Boy #1 Amalgam Comics April 1996 CBCS 8.5 sold price",
+            "GoCollect Spider-Boy #1 Amalgam Comics 1996 8.5 sold",
+            "Heritage Auctions Spider-Boy #1 Amalgam Comics 1996 8.5 sold",
+            "ComicLink Spider-Boy #1 Amalgam Comics 1996 8.5 sold"
+          ],
+          "sources": [
+            {
+              "title": "pricecharting.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCOUWzkm5__4RiqAqQQjeaVfQKX4qk4xr0u0o551BKaDC_Ll5Qakob1ixrtVmEF43elzzNQ-4blZD3Uhl24muO8A_MB96vlSSx4_r-O8pv7qWbYK4xKswanSWHGCGI9RLxDJv3NpL90ARk5NDEQPV5ICLrDBi43dM775p3I1i2qOb9Sb7jhQ=="
+            },
+            {
+              "title": "13thdimension.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFahYb3wOJGS4EOc6OO8n9XxEmoR_1AhbB3QRIzm2GM3gejo-6JlqzUJa0XZ_8F7qdetkkh1jubG3n0f_KIugympTtE7-vZAQ7qhhi2EjIJ6xA4N0u0LA3pePm7444XUr1GgKddIpPoW-_ecSKreiStShem1FIhNDuv_qUUfKKVm8ktClIqBr2BEIELBU89e_3IOC4="
+            },
+            {
+              "title": "gocollect.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqseZSGUm5_D26IyBVx9_Rq__rT5trj1KoYyRwTKInQVFoRxHFmL9kojpm8uTE_qb4G-DIl5Hl9kEGq6JbSd6i3Q5zvEMoauKCnhb1O8pDLHVGE4GwqGw-t_5Nr8ulR1mQOeU="
+            },
+            {
+              "title": "mycomicshop.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbsNiV99zrufHmA3PmYjvZlSAgowcjNEe8ClJBl1AE1et4QTLytYPD0jebR3RV6wJFFTpFsA_206jGi9f8AyJOXfzmWv-t85JWBVHi58ce6R2S2qWlapYNwH69Y8sW_ygs1CrWg9yv"
+            }
+          ],
+          "grounding_used": true
+        }
+      }
+    },
+    {
+      "image_filename": "IMG_4102.jpeg",
+      "success": true,
+      "processing_time": 61.90754699707031,
+      "error_message": null,
+      "valuation": {
+        "series": "Wolverine",
+        "title": "Wolverine",
+        "issue_number": "100",
+        "publisher": "Marvel Comics",
+        "publication_date": "April 1996",
+        "estimated_grade": "8.0",
+        "condition_notes": [
+          "Visible spine stress along the length of the spine",
+          "Top right corner shows blunting and creasing",
+          "Bottom right corner has minor wear",
+          "Scuffing and minor discoloration present on the white foil cover element",
+          "Minor ding/crease on the bottom edge near the spine"
+        ],
+        "key_issue": true,
+        "key_issue_notes": "Milestone 100th issue. Features the return of Wolverine's adamantium skeleton and the introduction of the 'Bone Claw' Wolverine.",
+        "rarity_notes": "This is a widely distributed milestone issue from the 1990s. While popular, it is not considered rare.",
+        "valuation": {
+          "low_estimate": 24.4,
+          "best_estimate": 27.0,
+          "high_estimate": 30.0,
+          "confidence": 0.7
+        },
+        "image_filename": "IMG_4102.jpeg",
+        "analysis_date": "2025-10-20T14:12:21.506371",
+        "llm_provider": "gemini-gemini-2.5-flash",
+        "identification_confidence": 0.95,
+        "analysis_notes": "The comic features a special metallic/foil cover, common for milestone issues in the 1990s. The cover explicitly states 'ANNIVERSARY EVENT!' and 'THE 100TH ISSUE!'. The publication month 'APRIL' is visible below the Marvel Comics logo. The year 1996 is confirmed by external knowledge of this specific issue's release date, aligning with the 90s era cover design and pricing. | Market data: Searches: Wolverine #100 April 1996 8.0 GPA sold prices, Wolverine #100 April 1996 8.0 GoCollect sold prices, Wolverine #100 April 1996 8.0 Heritage Auctions sold prices, Wolverine #100 April 1996 8.0 eBay sold listings, Wolverine #100 April 1996 8.0 MyComicShop sold prices, Wolverine #100 April 1996 8.0 ComicLink sold prices, Wolverine #100 (1996) CGC 8.0 sold, Wolverine #100 April 1996 CGC 8.0 sold prices 2023 2024 2025, GoCollect Wolverine #100 April 1996 CGC 8.0 sold, Heritage Auctions Wolverine #100 April 1996 CGC 8.0 sold, ComicLink Wolverine #100 April 1996 CGC 8.0 sold | Sources: pricecharting.com, pricecharting.com, pricecharting.com, gocollect.com",
+        "grounding_metadata": {
+          "search_queries": [
+            "Wolverine #100 April 1996 8.0 GPA sold prices",
+            "Wolverine #100 April 1996 8.0 GoCollect sold prices",
+            "Wolverine #100 April 1996 8.0 Heritage Auctions sold prices",
+            "Wolverine #100 April 1996 8.0 eBay sold listings",
+            "Wolverine #100 April 1996 8.0 MyComicShop sold prices",
+            "Wolverine #100 April 1996 8.0 ComicLink sold prices",
+            "Wolverine #100 (1996) CGC 8.0 sold",
+            "Wolverine #100 April 1996 CGC 8.0 sold prices 2023 2024 2025",
+            "GoCollect Wolverine #100 April 1996 CGC 8.0 sold",
+            "Heritage Auctions Wolverine #100 April 1996 CGC 8.0 sold",
+            "ComicLink Wolverine #100 April 1996 CGC 8.0 sold"
+          ],
+          "sources": [
+            {
+              "title": "pricecharting.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFv7TH6NtbXanoywCn2_3DJUC7Y15ucBo3DJMNFFeWFCIlm7XsYw8WPE5Tw5Ir3ofWs5jGVJwpY0EqcAqJ4tIZk4t1OAX_Ik7zfgarophE5hPd71XZsf0xgQJK2vtD3sdrh4a7GsWqqKoYH71KkMvZ_JfdZKO6PGxrDdVi89INAy4u1fi-tQ-iNBvLP12e-uA=="
+            },
+            {
+              "title": "pricecharting.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQ15DRrlVoSWtGmTxe3N-g6GU8xwVekJCW7cQ8PbGWWLbwObWu0IimInY1-BVyfaFp28250aeikKoe5xtyf01ORowp1S_1721t0gDttIsbKEMTbar4Ut_HCuxHCGpiNmI9vzN1aR4WnNAfgzhxmzkaplkALi3VxzghztXeB-hiFYGK2gQX"
+            },
+            {
+              "title": "pricecharting.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6t5T74AOF2kXof0Ue_1lMr0SissHq1Fe4J6SRV6R6yHoEdLwH5HX6fmvDPW8UeuvrhfFPSFtFoIV3t3JmPm1AzQ8UGTWfUaH5C4LhKSiFyUIjDTT2bOpdlzOzB_QFG0FB_AvrMIgWgXSqHc_Ivcqew36RYacQHg9b1vETkjYoeA9MLInKxcS5"
+            },
+            {
+              "title": "gocollect.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDpgp6BRFjvGG0OUpu2c3_mNMzmEdcJbX_IXQJBHm2MLC9k_oqBFbFxZYP7bDUByM5xhpwBSysHLUPaqHzNNb9X6CBtFEr4m20VAxIRqPcohIywk00HvuhkFRrqm9oOc9XDHc="
+            }
+          ],
+          "grounding_used": true
+        }
+      }
+    }
+  ]
+}

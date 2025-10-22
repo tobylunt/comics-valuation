@@ -1,0 +1,71 @@
+{
+  "image_filename": "IMG_4097.jpeg",
+  "success": true,
+  "processing_time": 45.70097804069519,
+  "error_message": null,
+  "valuation": {
+    "series": "GEN 13 BOOTLEG",
+    "title": "Part 2 of 3",
+    "issue_number": "9",
+    "publisher": "Image Comics",
+    "publication_date": "July 1998",
+    "estimated_grade": "8.0",
+    "condition_notes": [
+      "Minor corner ding/crease on the bottom right",
+      "Minor spine stress visible along the spine"
+    ],
+    "key_issue": false,
+    "key_issue_notes": "Not identified as a major key issue based on cover content. The 'Bootleg' series issues are generally not major keys unless they contain significant first appearances or events, which is not indicated by the cover.",
+    "rarity_notes": "The 'Bootleg' series was a spin-off from the main Gen 13 title. While not typically considered rare, specific print runs or variants can influence rarity. No immediate indicators of extreme rarity are present on the cover.",
+    "valuation": {
+      "low_estimate": 1.0,
+      "best_estimate": 5.0,
+      "high_estimate": 10.0,
+      "confidence": 0.0
+    },
+    "image_filename": "IMG_4097.jpeg",
+    "analysis_date": "2025-10-20T14:08:19.673225",
+    "llm_provider": "gemini-gemini-2.5-flash",
+    "identification_confidence": 0.95,
+    "analysis_notes": "The comic is identified as 'GEN 13 BOOTLEG Part 2 of 3', issue #9, published by Image Comics. The publication month 'JULY' is visible in the price box, and the year '1998' is inferred based on common publication data for this series and issue. The cover features three characters (two female, one male) surrounded by various firearms and bullet casings, consistent with the 'ALL EXPLOITATION ISSUE!' tagline. The overall condition is good, with minor wear consistent with an estimated grade of 8.0. | Market data: Searches: GEN 13 BOOTLEG #9 July 1998 8.0 GoCollect sold price, GEN 13 BOOTLEG #9 July 1998 8.0 GPA sold price, GEN 13 BOOTLEG #9 July 1998 8.0 Heritage Auctions sold price, GEN 13 BOOTLEG #9 July 1998 8.0 eBay sold listings, GEN 13 BOOTLEG #9 July 1998 8.0 MyComicShop sold price, GEN 13 BOOTLEG #9 July 1998 8.0 ComicLink sold price, GoCollect Gen 13 Bootleg #9 July 1998 8.0 sold, eBay sold listings Gen 13 Bootleg #9 July 1998 8.0 CGC, eBay sold listings Gen 13 Bootleg #9 July 1998 8.0 raw, Heritage Auctions Gen 13 Bootleg #9 July 1998 8.0 sold, MyComicShop Gen 13 Bootleg #9 July 1998 8.0 sold, ComicLink Gen 13 Bootleg #9 July 1998 8.0 sold | Sources: gocollect.com, ebay.com, ebay.com, controlzeta.ws, ebay.com",
+    "grounding_metadata": {
+      "search_queries": [
+        "GEN 13 BOOTLEG #9 July 1998 8.0 GoCollect sold price",
+        "GEN 13 BOOTLEG #9 July 1998 8.0 GPA sold price",
+        "GEN 13 BOOTLEG #9 July 1998 8.0 Heritage Auctions sold price",
+        "GEN 13 BOOTLEG #9 July 1998 8.0 eBay sold listings",
+        "GEN 13 BOOTLEG #9 July 1998 8.0 MyComicShop sold price",
+        "GEN 13 BOOTLEG #9 July 1998 8.0 ComicLink sold price",
+        "GoCollect Gen 13 Bootleg #9 July 1998 8.0 sold",
+        "eBay sold listings Gen 13 Bootleg #9 July 1998 8.0 CGC",
+        "eBay sold listings Gen 13 Bootleg #9 July 1998 8.0 raw",
+        "Heritage Auctions Gen 13 Bootleg #9 July 1998 8.0 sold",
+        "MyComicShop Gen 13 Bootleg #9 July 1998 8.0 sold",
+        "ComicLink Gen 13 Bootleg #9 July 1998 8.0 sold"
+      ],
+      "sources": [
+        {
+          "title": "gocollect.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJadZQ0Mf87GZcj0mJy7NiTzeIDCkaKLMicdFWojjUxIX6eOb1aRcaTcUn7PCdNcY0x9hofcBr1YxzmNr6jsRxPh7-PJ1GDtwh9ePCMw1hKIo4JVnoiB1IvalLkQ3MKd-GtRNoovc4"
+        },
+        {
+          "title": "ebay.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJtmqBK5Rcr7SF71fIhPG-3TjXt6XLRPTjcVujG7teWfthn0Ec_8nJTb4iknf67YDr8b5M7KSTnC8z_RMj6u3Y8cXCTPBdFTluL_5i_O8Zru8Hj3TqnXWKGeUV_rz_lol4WfS5iI72V5EMMNWbCGE="
+        },
+        {
+          "title": "ebay.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHp4fbqFw40qsFagicQXH_eDXk4ZX6_RCDmgq4SZcxYOGolwY14VOAaYuBW1rlr3CMfvp9ks-GljoOJHzAv01JdBbvNWM1VkINcFjsUvqUNvYbGBZmQrDb2yiWoa4F1VQQ="
+        },
+        {
+          "title": "controlzeta.ws",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFHzZWJQbWWoglKvkiz_mcs4cq-WJVVszp8sYAHZk1nqgDl_sZk0WBngftRhOi_F2NyuRQIAOpp3Jqc-ZZyCE1bLzYS_97c4JHpbZZCxgOUzlKH0CbhWirXG-FgnSIOpX70aY2yZoLFQZpS-dDQw-NtB9kCQDiLc35mGezT9Lem8l5cC33unlSEH9Fa7wx0A=="
+        },
+        {
+          "title": "ebay.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8G_VUA-3hZe11WNQlbBc7-ScZ5Ha0Htf05C9SjPlEMwiaR6XRLEKWqeUP368GP8g6qibG-1auySRopcHllanC6M80dUM4adUB3EvSrK4YpIzeVlT4yiFRhEogu6XM4lk="
+        }
+      ],
+      "grounding_used": true
+    }
+  }
+}

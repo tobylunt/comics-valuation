@@ -1,0 +1,69 @@
+{
+  "image_filename": "IMG_4098.jpeg",
+  "success": true,
+  "processing_time": 324.11805295944214,
+  "error_message": null,
+  "valuation": {
+    "series": "Detective Comics",
+    "title": "Batman",
+    "issue_number": "667",
+    "publisher": "DC Comics",
+    "publication_date": "October 1993",
+    "estimated_grade": "6.5",
+    "condition_notes": [
+      "Visible spine stress and creasing along the spine",
+      "Minor wear and blunting on corners, particularly the bottom right",
+      "Light surface scuffing and minor indentations on the black cover areas"
+    ],
+    "key_issue": true,
+    "key_issue_notes": "This issue is part of the 'Knightquest: The Crusade' storyline, a significant arc in the Batman mythos where Jean-Paul Valley (Azrael) takes on the mantle of Batman after Bruce Wayne is incapacitated. It continues the story of Azrael's increasingly violent and unstable tenure as Batman.",
+    "rarity_notes": "This is a widely distributed issue from a major storyline, not considered rare.",
+    "valuation": {
+      "low_estimate": 5.0,
+      "best_estimate": 10.0,
+      "high_estimate": 15.0,
+      "confidence": 0.4
+    },
+    "image_filename": "IMG_4098.jpeg",
+    "analysis_date": "2025-10-20T14:09:23.498122",
+    "llm_provider": "gemini-gemini-2.5-flash",
+    "identification_confidence": 0.95,
+    "analysis_notes": "The comic clearly identifies as 'Detective Comics #667' from 'Knightquest: The Crusade'. The publication date 'OCT 93' is visible in the price box. The cover features Azrael as Batman. Creators Dixon, Nolan, and Hanna are credited on the cover. The overall condition suggests a mid-grade copy due to visible wear. | Market data: Searches: Detective Comics #667 October 1993 6.5 GPA sold prices, Detective Comics #667 October 1993 6.5 GoCollect sold prices, Detective Comics #667 October 1993 6.5 Heritage Auctions sold prices, Detective Comics #667 October 1993 6.5 eBay sold listings, Detective Comics #667 October 1993 6.5 MyComicShop sold prices, Detective Comics #667 October 1993 6.5 ComicLink sold prices, GoCollect Detective Comics #667 October 1993 6.5 sold prices, eBay sold listings Detective Comics #667 October 1993 6.5, Heritage Auctions Detective Comics #667 October 1993 6.5 sold, MyComicShop Detective Comics #667 October 1993 6.5 sold, ComicLink Detective Comics #667 October 1993 6.5 sold, GoCollect Detective Comics #667 October 1993 6.0 sold prices, GoCollect Detective Comics #667 October 1993 7.0 sold prices, eBay sold listings Detective Comics #667 October 1993 raw, MyComicShop Detective Comics #667 October 1993 sold, ComicLink Detective Comics #667 October 1993 sold, GoCollect Detective Comics #667 October 1993 6.0 sold prices, GoCollect Detective Comics #667 October 1993 7.0 sold prices, eBay sold listings Detective Comics #667 October 1993 raw VF FN/VF, MyComicShop Detective Comics #667 October 1993 raw sold, ComicLink Detective Comics #667 October 1993 raw sold | Sources: gocollect.com, keycollectorcomics.com",
+    "grounding_metadata": {
+      "search_queries": [
+        "Detective Comics #667 October 1993 6.5 GPA sold prices",
+        "Detective Comics #667 October 1993 6.5 GoCollect sold prices",
+        "Detective Comics #667 October 1993 6.5 Heritage Auctions sold prices",
+        "Detective Comics #667 October 1993 6.5 eBay sold listings",
+        "Detective Comics #667 October 1993 6.5 MyComicShop sold prices",
+        "Detective Comics #667 October 1993 6.5 ComicLink sold prices",
+        "GoCollect Detective Comics #667 October 1993 6.5 sold prices",
+        "eBay sold listings Detective Comics #667 October 1993 6.5",
+        "Heritage Auctions Detective Comics #667 October 1993 6.5 sold",
+        "MyComicShop Detective Comics #667 October 1993 6.5 sold",
+        "ComicLink Detective Comics #667 October 1993 6.5 sold",
+        "GoCollect Detective Comics #667 October 1993 6.0 sold prices",
+        "GoCollect Detective Comics #667 October 1993 7.0 sold prices",
+        "eBay sold listings Detective Comics #667 October 1993 raw",
+        "MyComicShop Detective Comics #667 October 1993 sold",
+        "ComicLink Detective Comics #667 October 1993 sold",
+        "GoCollect Detective Comics #667 October 1993 6.0 sold prices",
+        "GoCollect Detective Comics #667 October 1993 7.0 sold prices",
+        "eBay sold listings Detective Comics #667 October 1993 raw VF FN/VF",
+        "MyComicShop Detective Comics #667 October 1993 raw sold",
+        "ComicLink Detective Comics #667 October 1993 raw sold"
+      ],
+      "sources": [
+        {
+          "title": "gocollect.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwSrPzmHXRBQLHltgPExqgSJPQaVNTalYeRdL6DxK4IgFOmWdQUv3QbP87jMsxYHxjTJQl86-pkxrVP8BqBmsUmvDoN68ZyVIzu_wRRpcW3oyk1xoy-c_p9VHRd4Tle0avwcnQzec4Qhz7"
+        },
+        {
+          "title": "keycollectorcomics.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExox8jmRItpJRdX-m_3m93kZOy8lZvsu-lepClDYuXBckca7x_FVaDoNAxvSM_MpJn9a9-fjMmL541ko0JgPwAR1fGJHhtmUCkPETYaJUIf3xpbxjzTUfiNpacw7h-gT-QZRCjs4MPUqlHSlwc61TW-_SCH68qT9F_gEyY6zmP"
+        }
+      ],
+      "grounding_used": true
+    }
+  }
+}

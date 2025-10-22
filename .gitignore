@@ -1,5 +1,9 @@
 # Environment files with API keys
 .env
+# Ignore generated report artifacts and thumbnails
+results/
+results/*.html
+results/thumbnails/
 config.json
 
 # Python

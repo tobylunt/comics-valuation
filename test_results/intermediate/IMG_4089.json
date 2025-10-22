@@ -1,0 +1,62 @@
+{
+  "image_filename": "IMG_4089.jpeg",
+  "success": true,
+  "processing_time": 500.7210669517517,
+  "error_message": null,
+  "valuation": {
+    "series": "The Amazing Spider-Man",
+    "title": "Lifetheft: The Final Chapter",
+    "issue_number": "388",
+    "publisher": "Marvel Comics",
+    "publication_date": "April 1994",
+    "estimated_grade": "7.5",
+    "condition_notes": [
+      "Top right corner blunt/crease",
+      "Minor surface scuffs/wear on blue foil",
+      "Minor wear on bottom right corner"
+    ],
+    "key_issue": false,
+    "key_issue_notes": "Not considered a major key issue; it concludes the 'Lifetheft' storyline and features the return of the Chameleon.",
+    "rarity_notes": "Common issue for the era, not particularly rare.",
+    "valuation": {
+      "low_estimate": 15.0,
+      "best_estimate": 25.0,
+      "high_estimate": 35.0,
+      "confidence": 0.6
+    },
+    "image_filename": "IMG_4089.jpeg",
+    "analysis_date": "2025-10-20T14:07:17.748123",
+    "llm_provider": "gemini-gemini-2.5-flash",
+    "identification_confidence": 0.95,
+    "analysis_notes": "The comic is identified as The Amazing Spider-Man #388, published by Marvel Comics in April 1994. The cover features a blue foil treatment and the story title 'Lifetheft: The Final Chapter'. It is a 'Special Double-Sized Issue'. The estimated grade is 7.5 due to corner wear and minor surface scuffs. The artist signature 'BAGLEY + R.C. '93' indicates the art was completed in 1993, consistent with an April 1994 publication date. | Market data: Searches: Amazing Spider-Man #388 April 1994 7.5 GPA sold prices, Amazing Spider-Man #388 April 1994 7.5 GoCollect sold prices, Amazing Spider-Man #388 April 1994 7.5 Heritage Auctions sold prices, Amazing Spider-Man #388 April 1994 7.5 eBay sold listings, Amazing Spider-Man #388 April 1994 7.5 MyComicShop sold prices, Amazing Spider-Man #388 April 1994 7.5 ComicLink sold prices | Sources: comicbookrealm.com, gocollect.com, ha.com, pricecharting.com",
+    "grounding_metadata": {
+      "search_queries": [
+        "Amazing Spider-Man #388 April 1994 7.5 GPA sold prices",
+        "Amazing Spider-Man #388 April 1994 7.5 GoCollect sold prices",
+        "Amazing Spider-Man #388 April 1994 7.5 Heritage Auctions sold prices",
+        "Amazing Spider-Man #388 April 1994 7.5 eBay sold listings",
+        "Amazing Spider-Man #388 April 1994 7.5 MyComicShop sold prices",
+        "Amazing Spider-Man #388 April 1994 7.5 ComicLink sold prices"
+      ],
+      "sources": [
+        {
+          "title": "comicbookrealm.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgfo0rNidYjEls9EbjJKc1A6XZZ-qS0wIUN5ZW14r3dQINU6KO9SetqwgHpzy_amkIA1w5La65Qb4S-K3z216M0tnqy8zS9xfsKVjCS-wYHPFHSLp-u0yodo9MlsdGZzdrR_9eWrODjPXqnxJzpydnIFhVqt1D4_thYdrxYFdPpI8wUjhSRaUHtm4yiAOss65yJQ-xTD2p2Ee56t1f0CHz_sK0CAanuQ0="
+        },
+        {
+          "title": "gocollect.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHciUXBqJhldNgcXJxOCg_qdOvSi5_PiFcLdp5ycLbNh04Nj_ZTwnzMc3INCrXWeMr76iuec-xXTH9cEwnYn5MpAfeWP2tzIa-jeyCqbbhQWF9X8Tg8zpabuiJK6LOQDKQRP_yIJcvptDH8zPy0J0Jsu22XxgCq4UcxB7RQbyu1oQ=="
+        },
+        {
+          "title": "ha.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8wfdTvstuk-jsnBNsmc6HLaq6QFHibJ6Zy3jgQRBJi6MmujBsnxSTpR-m7Sg3hKiUNsImMS56EFUazY94aqePRepJ8j3XmjsnWBBKiLEmGOoEv9Fx-pG7PfGLcGGwsws1G9gEcDHBVzbjh-h1r-pCjgISZIWLwzC0Lfx3XMb0bnIqJw=="
+        },
+        {
+          "title": "pricecharting.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-YSuAhd1vftsXHCsf60PJhfs9Ao49Gcc5T2RUrY-4bFfUZL_BzVbDw_Ni2K7jHtC0GZfQ7iRWbWy4sH-bbXYk0-5kTR6PjG4KaQvvtRctCqCkO51D8qE-slbmfBKXW-DI1U10WTNgPU1GYjwEB0HJAhyv1c3jqOLGecNDSw7F0Y5cZxydgk5x4OJE-H6GzEX_Uuob9HMe"
+        }
+      ],
+      "grounding_used": true
+    }
+  }
+}
