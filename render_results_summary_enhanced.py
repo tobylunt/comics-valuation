@@ -437,12 +437,7 @@ def generate_enhanced_html_report(analysis: Dict[str, Any],
         document.getElementById(modalId).style.display = 'none';
     }
 
-    // Close modal when clicking outside (backup for inline handlers)
-    window.onclick = function(event) {
-        if (event.target.classList.contains('modal')) {
-            event.target.style.display = 'none';
-        }
-    }
+    // Modal click-outside handling is done via inline onclick handlers on modal divs
 
     // Initialize DataTables
     (function() {
